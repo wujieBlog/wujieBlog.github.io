@@ -1,0 +1,889 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="jsBOM," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="JS 浏览器BOM浏览器对象模型（Browser Object Model (BOM)）尚无正式标准">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript-study08">
+<meta property="og:url" content="http://wujieBlog.github.io/2016/04/14/javascript-study08/index.html">
+<meta property="og:site_name" content="MrCui's Blog">
+<meta property="og:description" content="JS 浏览器BOM浏览器对象模型（Browser Object Model (BOM)）尚无正式标准">
+<meta property="og:updated_time" content="2016-04-14T08:17:12.392Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript-study08">
+<meta name="twitter:description" content="JS 浏览器BOM浏览器对象模型（Browser Object Model (BOM)）尚无正式标准">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> javascript-study08 | MrCui's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MrCui's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">前端工程狮</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/../http:/cwjie0229.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                javascript-study08
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-14T16:13:48+08:00" content="2016-04-14">
+              2016-04-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/14/javascript-study08/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/14/javascript-study08/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="JS-浏览器BOM"><a href="#JS-浏览器BOM" class="headerlink" title="JS 浏览器BOM"></a>JS 浏览器BOM</h1><p>浏览器对象模型（Browser Object Model (BOM)）尚无正式标准</p>
+<a id="more"></a>
+<h2 id="Window-对象"><a href="#Window-对象" class="headerlink" title="Window 对象"></a>Window 对象</h2><ul>
+<li>所有浏览器都支持 window 对象。它表示浏览器窗口。</li>
+<li>所有 JavaScript 全局对象、函数以及变量均自动成为 window 对象的成员。</li>
+<li>全局变量是 window 对象的属性。</li>
+<li>全局函数是 window 对象的方法。</li>
+<li>甚至 HTML DOM 的 document 也是 window 对象的属性之一：</li>
+</ul>
+<pre><code>window.document.getElementById(&quot;header&quot;);
+
+类似
+
+document.getElementById(&quot;header&quot;);
+</code></pre><h2 id="Window-尺寸"><a href="#Window-尺寸" class="headerlink" title="Window 尺寸"></a>Window 尺寸</h2><p>（Window 尺寸由于有浏览器的不同所有获取时的方法也不同，存在兼容性问题）<br>有三种方法能够确定浏览器窗口的尺寸（浏览器的视口，不包括工具栏和滚动条）。</p>
+<ul>
+<li><p>对于Internet Explorer、Chrome、Firefox、Opera 以及 Safari：</p>
+<pre><code>window.innerHeight - 浏览器窗口的内部高度
+window.innerWidth - 浏览器窗口的内部宽度
+</code></pre></li>
+<li><p>对于 Internet Explorer 8、7、6、5：</p>
+<pre><code>document.documentElement.clientHeight
+document.documentElement.clientWidth
+</code></pre></li>
+<li><p>或者</p>
+<pre><code>document.body.clientHeight
+document.body.clientWidth
+</code></pre></li>
+</ul>
+<p>js写获取window尺寸</p>
+<pre><code>var w=window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
+
+var h=window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+</code></pre><h2 id="其他-Window-方法"><a href="#其他-Window-方法" class="headerlink" title="其他 Window 方法"></a>其他 Window 方法</h2><ul>
+<li>window.open() - 打开新窗口</li>
+<li>window.close() - 关闭当前窗口</li>
+<li>window.moveTo() - 移动当前窗口</li>
+<li>window.resizeTo() - 调整当前窗口的尺寸</li>
+</ul>
+<h1 id="JavaScript-Window-Screen"><a href="#JavaScript-Window-Screen" class="headerlink" title="JavaScript Window Screen"></a>JavaScript Window Screen</h1><p>window.screen 对象包含有关用户屏幕的信息。</p>
+<h2 id="Window-Screen"><a href="#Window-Screen" class="headerlink" title="Window Screen"></a>Window Screen</h2><p>window.screen对象在编写时可以不使用 window 这个前缀。</p>
+<pre><code>screen.availWidth - 可用的屏幕宽度
+screen.availHeight - 可用的屏幕高度
+</code></pre><h3 id="Window-Screen-可用宽度"><a href="#Window-Screen-可用宽度" class="headerlink" title="Window Screen 可用宽度"></a>Window Screen 可用宽度</h3><p>screen.availWidth 属性返回访问者屏幕的宽度，以像素计，减去界面特性，比如窗口任务栏。</p>
+<h3 id="Window-Screen-可用高度"><a href="#Window-Screen-可用高度" class="headerlink" title="Window Screen 可用高度"></a>Window Screen 可用高度</h3><p>screen.availHeight 属性返回访问者屏幕的高度，以像素计，减去界面特性，比如窗口任务栏。</p>
+<h2 id="screen-属性实例"><a href="#screen-属性实例" class="headerlink" title="screen 属性实例"></a>screen 属性实例</h2><pre><code>&lt;script&gt;
+document.write(&quot;Total width/height: &quot;);
+document.write(screen.width + &quot;*&quot; + screen.height);
+document.write(&quot;&lt;br&gt;&quot;);
+document.write(&quot;Available width/height: &quot;);
+document.write(screen.availWidth + &quot;*&quot; + screen.availHeight);
+document.write(&quot;&lt;br&gt;&quot;);
+document.write(&quot;Color depth: &quot;);
+document.write(screen.colorDepth);
+document.write(&quot;&lt;br&gt;&quot;);
+document.write(&quot;Color resolution: &quot;);
+document.write(screen.pixelDepth);
+&lt;/script&gt;
+</code></pre><h1 id="JavaScript-Window-Location"><a href="#JavaScript-Window-Location" class="headerlink" title="JavaScript Window Location"></a>JavaScript Window Location</h1><p>window.location 对象用于获得当前页面的地址 (URL)，并把浏览器重定向到新的页面</p>
+<h2 id="Window-Location"><a href="#Window-Location" class="headerlink" title="Window Location"></a>Window Location</h2><p>window.location 对象在编写时可不使用 window 这个前缀。 一些例子：</p>
+<ul>
+<li>location.hostname 返回 web 主机的域名</li>
+<li>location.pathname 返回当前页面的路径和文件名</li>
+<li>location.port 返回 web 主机的端口 （80 或 443）</li>
+<li>location.protocol 返回所使用的 web 协议（http:// 或 https://）</li>
+</ul>
+<h2 id="Window-Location-Href"><a href="#Window-Location-Href" class="headerlink" title="Window Location Href"></a>Window Location Href</h2><p>location.href 属性返回当前页面的 URL。</p>
+<h2 id="Window-Location-Pathname"><a href="#Window-Location-Pathname" class="headerlink" title="Window Location Pathname"></a>Window Location Pathname</h2><p>location.pathname 属性返回 URL 的路径名。</p>
+<h2 id="Window-Location-Assign"><a href="#Window-Location-Assign" class="headerlink" title="Window Location Assign"></a>Window Location Assign</h2><p>location.assign() 方法加载新的文档。</p>
+<h1 id="JavaScript-Window-History"><a href="#JavaScript-Window-History" class="headerlink" title="JavaScript Window History"></a>JavaScript Window History</h1><p>window.history 对象包含浏览器的历史。</p>
+<h2 id="Window-History"><a href="#Window-History" class="headerlink" title="Window History"></a>Window History</h2><p>window.history对象在编写时可不使用 window 这个前缀。<br>为了保护用户隐私，对 JavaScript 访问该对象的方法做出了限制。<br>一些方法：</p>
+<ul>
+<li>history.back() - 与在浏览器点击后退按钮相同</li>
+<li>history.forward() - 与在浏览器中点击按钮向前相同</li>
+</ul>
+<h3 id="Window-History-Back"><a href="#Window-History-Back" class="headerlink" title="Window History Back"></a>Window History Back</h3><p>history.back() 方法加载历史列表中的前一个 URL。</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function goBack()
+  {
+  window.history.back()
+  }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;input type=&quot;button&quot; value=&quot;Back&quot; onclick=&quot;goBack()&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="Window-History-Forward"><a href="#Window-History-Forward" class="headerlink" title="Window History Forward"></a>Window History Forward</h3><p>history forward() 方法加载历史列表中的下一个 URL。</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function goForward()
+  {
+  window.history.forward()
+  }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;input type=&quot;button&quot; value=&quot;Forward&quot; onclick=&quot;goForward()&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h1 id="JavaScript-Window-Navigator"><a href="#JavaScript-Window-Navigator" class="headerlink" title="JavaScript Window Navigator"></a>JavaScript Window Navigator</h1><p>window.navigator 对象包含有关访问者浏览器的信息。</p>
+<h2 id="Window-Navigator"><a href="#Window-Navigator" class="headerlink" title="Window Navigator"></a>Window Navigator</h2><p>window.navigator 对象在编写时可不使用 window 这个前缀。</p>
+<pre><code>&lt;div id=&quot;example&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+
+txt = &quot;&lt;p&gt;Browser CodeName: &quot; + navigator.appCodeName + &quot;&lt;/p&gt;&quot;;
+txt+= &quot;&lt;p&gt;Browser Name: &quot; + navigator.appName + &quot;&lt;/p&gt;&quot;;
+txt+= &quot;&lt;p&gt;Browser Version: &quot; + navigator.appVersion + &quot;&lt;/p&gt;&quot;;
+txt+= &quot;&lt;p&gt;Cookies Enabled: &quot; + navigator.cookieEnabled + &quot;&lt;/p&gt;&quot;;
+txt+= &quot;&lt;p&gt;Platform: &quot; + navigator.platform + &quot;&lt;/p&gt;&quot;;
+txt+= &quot;&lt;p&gt;User-agent header: &quot; + navigator.userAgent + &quot;&lt;/p&gt;&quot;;
+txt+= &quot;&lt;p&gt;User-agent language: &quot; + navigator.systemLanguage + &quot;&lt;/p&gt;&quot;;
+
+document.getElementById(&quot;example&quot;).innerHTML=txt;
+
+&lt;/script&gt;
+</code></pre><h1 id="JavaScript-弹窗"><a href="#JavaScript-弹窗" class="headerlink" title="JavaScript 弹窗"></a>JavaScript 弹窗</h1><p>可以在 JavaScript 中创建三种消息框：警告框、确认框、提示框</p>
+<h2 id="警告框"><a href="#警告框" class="headerlink" title="警告框"></a>警告框</h2><p>警告框经常用于确保用户可以得到某些信息。<br><br>当警告框出现后，用户需要点击确定按钮才能继续进行操作。<br></p>
+<p>语法</p>
+<pre><code>window.alert(&quot;sometext&quot;);
+</code></pre><p>举例</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function myFunction()
+{
+    alert(&quot;你好，我是一个警告框！&quot;);
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;input type=&quot;button&quot; onclick=&quot;myFunction()&quot; value=&quot;显示警告框&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="确认框"><a href="#确认框" class="headerlink" title="确认框"></a>确认框</h2><p>确认框通常用于验证是否接受用户操作。<br><br>当确认卡弹出时，用户可以点击 “确认” 或者 “取消” 来确定用户操作。<br><br>当你点击 “确认”, 确认框返回 true， 如果点击 “取消”, 确认框返回 false。<br></p>
+<p>语法</p>
+<pre><code>window.confirm(&quot;sometext&quot;);
+</code></pre><p>举例</p>
+<pre><code>var r=confirm(&quot;按下按钮&quot;);
+if (r==true)
+{
+    x=&quot;你按下了\&quot;确定\&quot;按钮!&quot;;
+}
+else
+{
+    x=&quot;你按下了\&quot;取消\&quot;按钮!&quot;;
+}
+</code></pre><h2 id="提示框"><a href="#提示框" class="headerlink" title="提示框"></a>提示框</h2><p>提示框经常用于提示用户在进入页面前输入某个值。<br><br>当提示框出现后，用户需要输入某个值，然后点击确认或取消按钮才能继续操纵。<br><br>如果用户点击确认，那么返回值为输入的值。如果用户点击取消，那么返回值为 null。<br></p>
+<p>语法</p>
+<pre><code>window.prompt(&quot;sometext&quot;,&quot;defaultvalue&quot;);
+</code></pre><p>举例</p>
+<pre><code>var person=prompt(&quot;请输入你的名字&quot;,&quot;Harry Potter&quot;);
+if (person!=null &amp;&amp; person!=&quot;&quot;)
+{
+    x=&quot;你好 &quot; + person + &quot;! 今天感觉如何?&quot;;
+    document.getElementById(&quot;demo&quot;).innerHTML=x;
+}
+</code></pre><h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>弹窗使用 反斜杠 + “n”(\n) 来设置换行。</p>
+<pre><code>alert(&quot;Hello\nHow are you?&quot;);
+</code></pre><h1 id="JavaScript-计时事件"><a href="#JavaScript-计时事件" class="headerlink" title="JavaScript 计时事件"></a>JavaScript 计时事件</h1><p>JavaScript 一个设定的时间间隔之后来执行代码<br>我们称之为计时事件</p>
+<h2 id="JavaScript-计时事件-1"><a href="#JavaScript-计时事件-1" class="headerlink" title="JavaScript 计时事件"></a>JavaScript 计时事件</h2><p>通过使用 JavaScript，我们有能力作到在一个设定的时间间隔之后来执行代码，而不是在函数被调用后立即执行。我们称之为计时事件<br></p>
+<p>在 JavaScritp 中使用计时事件是很容易的，两个关键方法是:<br></p>
+<pre><code>setInterval() - 间隔指定的毫秒数不停地执行指定的代码。
+setTimeout() - 暂停指定的毫秒数后执行指定的代码
+</code></pre><h2 id="setInterval-方法"><a href="#setInterval-方法" class="headerlink" title="setInterval() 方法"></a>setInterval() 方法</h2><p>setInterval() 间隔指定的毫秒数不停地执行指定的代码<br></p>
+<p>语法</p>
+<pre><code>window.setInterval(&quot;function(){}&quot;,milliseconds);
+</code></pre><p>setInterval() 第一个参数是函数（function）。<br>第二个参数间隔的毫秒数</p>
+<h2 id="如何停止执行"><a href="#如何停止执行" class="headerlink" title="如何停止执行?"></a>如何停止执行?</h2><p>clearInterval() 方法用于停止 setInterval() 方法执行的函数代码。<br><br>语法</p>
+<pre><code>window.clearInterval(intervalVariable)
+</code></pre><p>window.clearInterval() 方法可以不使用window前缀，直接使用函数clearInterval()。<br>要使用 clearInterval() 方法, 在创建计时方法时你必须使用全局变量：</p>
+<pre><code>myVar=setInterval(&quot;javascript function&quot;,milliseconds);
+</code></pre><h2 id="setTimeout-方法"><a href="#setTimeout-方法" class="headerlink" title="setTimeout() 方法"></a>setTimeout() 方法</h2><p>语法</p>
+<pre><code>window.setTimeout(&quot;javascript 函数&quot;,毫秒数);
+</code></pre><p>1.setTimeout() 方法会返回某个值。在上面的语句中，值被储存在名为 t 的变量中。假如你希望取消这个 setTimeout()，你可以使用这个变量名来指定它。<br><br>2.setTimeout() 的第一个参数是含有 JavaScript 语句的字符串。这个语句可能诸如 “alert(‘5 seconds!’)”，或者对函数的调用，诸如 alertMsg()”。<br><br>3.第二个参数指示从当前起多少毫秒后执行第一个参数。<br><br>4.提示：1000 毫秒等于一秒。<br></p>
+<h2 id="如何停止执行-1"><a href="#如何停止执行-1" class="headerlink" title="如何停止执行?"></a>如何停止执行?</h2><p>clearTimeout() 方法用于停止执行setTimeout()方法的函数代码。</p>
+<p>语法</p>
+<pre><code>window.clearTimeout(timeoutVariable)
+</code></pre><p>1.window.clearTimeout() 方法可以不使用window 前缀。<br><br>2.要使用clearTimeout() 方法, 你必须在创建超时方法中（setTimeout）使用全局变量:</p>
+<pre><code>myVar=setTimeout(&quot;javascript function&quot;,milliseconds);
+</code></pre><p>如果函数还未被执行，你可以使用 clearTimeout() 方法来停止执行函数代码。</p>
+<h1 id="JavaScript-Cookies（重要）"><a href="#JavaScript-Cookies（重要）" class="headerlink" title="JavaScript Cookies（重要）"></a>JavaScript Cookies（重要）</h1><p>Cookies 用于存储 web 页面的用户信息。</p>
+<h2 id="什么是-Cookies？"><a href="#什么是-Cookies？" class="headerlink" title="什么是 Cookies？"></a>什么是 Cookies？</h2><ol>
+<li>Cookies 是一些数据, 存储于你电脑上的文本文件中。</li>
+<li>当 web 服务器向浏览器发送 web 页面时，在连接关闭后，服务端不会记录用户的信息。</li>
+<li><p>Cookies 的作用就是用于解决 “如何记录客户端的用户信息”:</p>
+<ul>
+<li>当用户访问 web 页面时，他的名字可以记录在 cookie 中。</li>
+<li>在用户下一次访问该页面时，可以在 cookie 中读取用户访问记录</li>
+</ul>
+</li>
+</ol>
+<p>Cookies 以名/值对形式存储，如下所示: </p>
+<pre><code>username=John Doe
+</code></pre><p>当浏览器从服务器上请求 web 页面时， 属于该页面的 cookies 会被添加到该请求中。服务端通过这种方式来获取用户的信息</p>
+<h2 id="使用-JavaScript-创建Cookie"><a href="#使用-JavaScript-创建Cookie" class="headerlink" title="使用 JavaScript 创建Cookie"></a>使用 JavaScript 创建Cookie</h2><ol>
+<li>JavaScript 可以使用 document.cookie 属性来创建 、读取、及删除 cookies。</li>
+</ol>
+<p>JavaScript 中，创建 cookie 如下所示：</p>
+<pre><code>document.cookie=&quot;username=John Doe&quot;;
+</code></pre><p>您还可以为 cookie 添加一个过期时间（以 UTC 或 GMT 时间）。默认情况下，cookie 在浏览器关闭时删除：</p>
+<pre><code>document.cookie=&quot;username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 GMT&quot;;
+</code></pre><p>您可以使用 path 参数告诉浏览器 cookie 的路径。默认情况下，cookie 属于当前页面。</p>
+<pre><code>document.cookie=&quot;username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 GMT; path=/&quot;;
+</code></pre><h2 id="使用-JavaScript-读取-Cookie"><a href="#使用-JavaScript-读取-Cookie" class="headerlink" title="使用 JavaScript 读取 Cookie"></a>使用 JavaScript 读取 Cookie</h2><pre><code>var x = document.cookie;
+</code></pre><h2 id="使用-JavaScript-修改-Cookie"><a href="#使用-JavaScript-修改-Cookie" class="headerlink" title="使用 JavaScript 修改 Cookie"></a>使用 JavaScript 修改 Cookie</h2><p>在 JavaScript 中，修改 cookies 类似于创建 cookies，如下所示：</p>
+<pre><code>document.cookie=&quot;username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 GMT; path=/&quot;;
+</code></pre><p>使用 JavaScript 删除 Cookie</p>
+<p>删除 cookie 非常简单。您只需要设置 expires 参数为以前的时间即可，如下所示，设置为 Thu, 01 Jan 1970 00:00:00 GMT:</p>
+<pre><code>document.cookie = &quot;username=; expires=Thu, 01 Jan 1970 00:00:00 GMT&quot;;
+</code></pre><p>Cookie 字符串</p>
+<ol>
+<li>document.cookie 属性看起来像一个普通的文本字符串，其实它不是。</li>
+<li>即使您在 document.cookie 中写入一个完整的 cookie 字符串, 当您重新读取该 cookie 信息时，cookie 信息是以名/值对的形式展示的。</li>
+<li>如果您设置了新的 cookie，旧的 cookie 不会被覆盖。 新 cookie 将添加到 document.cookie 中，所以如果您重新读取document.cookie，您将获得如下所示的数据：</li>
+<li>cookie1=value; cookie2=value;</li>
+</ol>
+<h2 id="设置-cookie-值的函数"><a href="#设置-cookie-值的函数" class="headerlink" title="设置 cookie 值的函数"></a>设置 cookie 值的函数</h2><p>首先，我们创建一个函数用于存储访问者的名字：</p>
+<pre><code>function setCookie(cname,cvalue,exdays)
+{
+var d = new Date();
+d.setTime(d.getTime()+(exdays*24*60*60*1000));
+var expires = &quot;expires=&quot;+d.toGMTString();
+document.cookie = cname + &quot;=&quot; + cvalue + &quot;; &quot; + expires;
+}
+</code></pre><p>函数解析：</p>
+<ul>
+<li>以上的函数参数中，cookie 的名称为 cname，cookie 的值为 cvalue，并设置了 cookie 的过期时间 expires。<br>该函数设置了 cookie 名、cookie 值、cookie过期时间。</li>
+</ul>
+<h2 id="获取-cookie-值的函数"><a href="#获取-cookie-值的函数" class="headerlink" title="获取 cookie 值的函数"></a>获取 cookie 值的函数</h2><pre><code>function getCookie(cname)
+{
+var name = cname + &quot;=&quot;;
+var ca = document.cookie.split(&apos;;&apos;);
+for(var i=0; i&lt;ca.length; i++) 
+  {
+  var c = ca[i].trim();
+  if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+  }
+return &quot;&quot;;
+}
+</code></pre><p>函数解析：</p>
+<ul>
+<li>cookie 名的参数为 cname。</li>
+<li>创建一个文本变量用于检索指定 cookie :cname + “=”。</li>
+<li>使用分号来分割 document.cookie 字符串，并将分割后的字符串数组赋值给 ca (ca = document.cookie.split(‘;’))。</li>
+<li>循环 ca 数组 (i=0;i&lt;ca.length;i++)，然后读取数组中的每个值，并去除前后空格 (c=ca[i].trim())。</li>
+<li>如果找到 cookie(c.indexOf(name) == 0)，返回 cookie 的值 (c.substring(name.length,c.length)。</li>
+<li>如果没有找到 cookie, 返回 “”。</li>
+</ul>
+<h2 id="检测-cookie-值的函数"><a href="#检测-cookie-值的函数" class="headerlink" title="检测 cookie 值的函数"></a>检测 cookie 值的函数</h2><ol>
+<li>最后，我们可以创建一个检测 cookie 是否创建的函数。</li>
+<li>如果设置了 cookie，将显示一个问候信息。</li>
+<li><p>如果没有设置 cookie，将会显示一个弹窗用于询问访问者的名字，并调用 setCookie 函数将访问者的名字存储 365 天：</p>
+<pre><code>function checkCookie()
+{
+var username=getCookie(&quot;username&quot;);
+if (username!=&quot;&quot;)
+  {
+  alert(&quot;Welcome again &quot; + username);
+  }
+else 
+  {
+  username = prompt(&quot;Please enter your name:&quot;,&quot;&quot;);
+  if (username!=&quot;&quot; &amp;&amp; username!=null)
+    {
+    setCookie(&quot;username&quot;,username,365);
+    }
+  }
+}
+</code></pre></li>
+</ol>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/jsBOM/" rel="tag">#jsBOM</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/13/javascript-study07/" rel="next" title="javascript-study07">
+                <i class="fa fa-chevron-left"></i> javascript-study07
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/19/JsCommenFunctions/" rel="prev" title="JsCommenFunctions">
+                JsCommenFunctions <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/04/14/javascript-study08/"
+     data-title="javascript-study08"
+     data-content=""
+     data-url="http://wujieBlog.github.io/2016/04/14/javascript-study08/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/14/javascript-study08/"
+           data-title="javascript-study08" data-url="http://wujieBlog.github.io/2016/04/14/javascript-study08/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="cui wujie" />
+          <p class="site-author-name" itemprop="name">cui wujie</p>
+          <p class="site-description motion-element" itemprop="description">花逞春光，一番雨，一番风，终归尘土;竹坚雅操，几朝霜几朝雪，傲就琅矸</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/cwjie0229/" target="_blank">
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/cwjiewb/" target="_blank">
+                  
+                  WeiBo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/cwujie" target="_blank">
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/cui-wu-jie-7" target="_blank">
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://cwjie0229.github.io" target="_blank">
+                  
+                  Resume
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JS-浏览器BOM"><span class="nav-number">1.</span> <span class="nav-text">JS 浏览器BOM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Window-对象"><span class="nav-number">1.1.</span> <span class="nav-text">Window 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Window-尺寸"><span class="nav-number">1.2.</span> <span class="nav-text">Window 尺寸</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他-Window-方法"><span class="nav-number">1.3.</span> <span class="nav-text">其他 Window 方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-Window-Screen"><span class="nav-number">2.</span> <span class="nav-text">JavaScript Window Screen</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Window-Screen"><span class="nav-number">2.1.</span> <span class="nav-text">Window Screen</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Window-Screen-可用宽度"><span class="nav-number">2.1.1.</span> <span class="nav-text">Window Screen 可用宽度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Window-Screen-可用高度"><span class="nav-number">2.1.2.</span> <span class="nav-text">Window Screen 可用高度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#screen-属性实例"><span class="nav-number">2.2.</span> <span class="nav-text">screen 属性实例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-Window-Location"><span class="nav-number">3.</span> <span class="nav-text">JavaScript Window Location</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Window-Location"><span class="nav-number">3.1.</span> <span class="nav-text">Window Location</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Window-Location-Href"><span class="nav-number">3.2.</span> <span class="nav-text">Window Location Href</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Window-Location-Pathname"><span class="nav-number">3.3.</span> <span class="nav-text">Window Location Pathname</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Window-Location-Assign"><span class="nav-number">3.4.</span> <span class="nav-text">Window Location Assign</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-Window-History"><span class="nav-number">4.</span> <span class="nav-text">JavaScript Window History</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Window-History"><span class="nav-number">4.1.</span> <span class="nav-text">Window History</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Window-History-Back"><span class="nav-number">4.1.1.</span> <span class="nav-text">Window History Back</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Window-History-Forward"><span class="nav-number">4.1.2.</span> <span class="nav-text">Window History Forward</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-Window-Navigator"><span class="nav-number">5.</span> <span class="nav-text">JavaScript Window Navigator</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Window-Navigator"><span class="nav-number">5.1.</span> <span class="nav-text">Window Navigator</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-弹窗"><span class="nav-number">6.</span> <span class="nav-text">JavaScript 弹窗</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#警告框"><span class="nav-number">6.1.</span> <span class="nav-text">警告框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#确认框"><span class="nav-number">6.2.</span> <span class="nav-text">确认框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提示框"><span class="nav-number">6.3.</span> <span class="nav-text">提示框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#换行"><span class="nav-number">6.4.</span> <span class="nav-text">换行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-计时事件"><span class="nav-number">7.</span> <span class="nav-text">JavaScript 计时事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-计时事件-1"><span class="nav-number">7.1.</span> <span class="nav-text">JavaScript 计时事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setInterval-方法"><span class="nav-number">7.2.</span> <span class="nav-text">setInterval() 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何停止执行"><span class="nav-number">7.3.</span> <span class="nav-text">如何停止执行?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setTimeout-方法"><span class="nav-number">7.4.</span> <span class="nav-text">setTimeout() 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何停止执行-1"><span class="nav-number">7.5.</span> <span class="nav-text">如何停止执行?</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-Cookies（重要）"><span class="nav-number">8.</span> <span class="nav-text">JavaScript Cookies（重要）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-Cookies？"><span class="nav-number">8.1.</span> <span class="nav-text">什么是 Cookies？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-JavaScript-创建Cookie"><span class="nav-number">8.2.</span> <span class="nav-text">使用 JavaScript 创建Cookie</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-JavaScript-读取-Cookie"><span class="nav-number">8.3.</span> <span class="nav-text">使用 JavaScript 读取 Cookie</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-JavaScript-修改-Cookie"><span class="nav-number">8.4.</span> <span class="nav-text">使用 JavaScript 修改 Cookie</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置-cookie-值的函数"><span class="nav-number">8.5.</span> <span class="nav-text">设置 cookie 值的函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取-cookie-值的函数"><span class="nav-number">8.6.</span> <span class="nav-text">获取 cookie 值的函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检测-cookie-值的函数"><span class="nav-number">8.7.</span> <span class="nav-text">检测 cookie 值的函数</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cui wujie</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"iissnan-notes"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

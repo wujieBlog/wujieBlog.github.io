@@ -1,0 +1,834 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="javascript 比较和逻辑运算符比较运算符对于x=5来说
+        运算符  描述             比较              返回值
+        ==    等于           x==8               fasle
+        ===   绝对等于          x===&amp;apos;5&amp;apos;          fasle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript-study02">
+<meta property="og:url" content="http://wujieBlog.github.io/2016/04/07/javascript-study02/index.html">
+<meta property="og:site_name" content="MrCui's Blog">
+<meta property="og:description" content="javascript 比较和逻辑运算符比较运算符对于x=5来说
+        运算符  描述             比较              返回值
+        ==    等于           x==8               fasle
+        ===   绝对等于          x===&amp;apos;5&amp;apos;          fasle">
+<meta property="og:updated_time" content="2016-04-07T15:10:12.947Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript-study02">
+<meta name="twitter:description" content="javascript 比较和逻辑运算符比较运算符对于x=5来说
+        运算符  描述             比较              返回值
+        ==    等于           x==8               fasle
+        ===   绝对等于          x===&amp;apos;5&amp;apos;          fasle">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> javascript-study02 | MrCui's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MrCui's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">前端工程狮</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/../http:/cwjie0229.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                javascript-study02
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-07T22:58:50+08:00" content="2016-04-07">
+              2016-04-07
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/07/javascript-study02/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/07/javascript-study02/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="javascript-比较和逻辑运算符"><a href="#javascript-比较和逻辑运算符" class="headerlink" title="javascript 比较和逻辑运算符"></a>javascript 比较和逻辑运算符</h1><h2 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h2><pre><code>对于x=5来说
+        运算符  描述             比较              返回值
+        ==    等于           x==8               fasle
+        ===   绝对等于          x===&apos;5&apos;          fasle
+        ===   绝对等于       x===5              true 
+        !=    不等于           x！=5               fasle
+        !==   绝对不等于         x!==&apos;5&apos;          true
+        !==   绝对不等于      x!==5              fasle
+         &gt;    大于              x &gt; 8             fasle
+         &lt;    小于             x &lt; 8            true
+         &gt;=   大于等于           x &gt;+ 8          fasle
+         &lt;=   小于等于           x &lt;+ 8          true
+</code></pre><p>使用放置在条件语句等中使用</p>
+<pre><code>if(a&gt;19) x=&apos;too old&apos;;
+</code></pre><a id="more"></a>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>逻辑运算符用于测量变量或值之间的逻辑</p>
+<pre><code>给定x=6 以及 y=3 下方解释了逻辑运算符的使用
+
+运算符        描述                例子
+
+&amp;&amp;            and                （ x&lt; 10 &amp;&amp; y&gt; 1）为true    
+||            or                （ x==5||y==5）为fasle
+！            not                !（x==y ）为true
+</code></pre><h2 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h2><p>js还包含了某些条件对变量进行赋值的条件运算符</p>
+<pre><code>var visible=(condition)?value1:value2;
+
+解释：当condition条件为 &quot; 真 &quot; 时：visible的值为value1;
+     当condition条件为 &quot; 假 &quot; 时：visible的值为value2;
+</code></pre><h1 id="javascript语句"><a href="#javascript语句" class="headerlink" title="javascript语句"></a>javascript语句</h1><h2 id="if-……else"><a href="#if-……else" class="headerlink" title="if ……else"></a>if ……else</h2><pre><code>if(condition1){
+    当condition1条件为真时，执行
+}else if(condition2){
+    当condition2条件为真时，执行
+}else if(condition3){
+    当condition3条件为真时，执行
+}else{
+    当condition1条件为假 condition2条件为假 condition3条件为假时，执行
+}
+</code></pre><h2 id="Javascript-switch"><a href="#Javascript-switch" class="headerlink" title="Javascript switch"></a>Javascript switch</h2><pre><code>switch（n）
+{    
+    case 1: 执行代码块 1 break；
+    case 2: 执行代码块 2 break；
+    case 3: 执行代码块 3 break；
+    default；
+}
+
+在switch传入条件看与case 哪个符合 执行哪个代码块
+</code></pre><h2 id="Javascript-for"><a href="#Javascript-for" class="headerlink" title="Javascript for"></a>Javascript for</h2><pre><code>for（var i=0;i&lt;c.length;i++）
+{    
+    执行语句
+}
+</code></pre><h3 id="不同类型的循环"><a href="#不同类型的循环" class="headerlink" title="不同类型的循环"></a>不同类型的循环</h3><ol>
+<li>for</li>
+<li>for/in</li>
+<li>while</li>
+<li>do/while</li>
+</ol>
+<hr>
+<ol>
+<li>for 同上</li>
+<li><p>for/in</p>
+<pre><code>var person ={fname:&apos;john&apos;,lname:&apos;Doe&apos;,age:&apos;23&apos;};
+for(x in person)
+{
+    txt=txt+person(x);
+}
+</code></pre></li>
+<li>while</li>
+<li>do/while    后面续接</li>
+</ol>
+<h2 id="Javascript-while"><a href="#Javascript-while" class="headerlink" title="Javascript while"></a>Javascript while</h2><pre><code>while(condition){
+    //执行语句 ；
+    console.log(1);
+}
+
+在指定条件condition下不停的执行语句console.log(1)
+</code></pre><h2 id="Javascript-do-while"><a href="#Javascript-do-while" class="headerlink" title="Javascript do/while"></a>Javascript do/while</h2><pre><code>do{
+    //执行代码
+    console.log(2);
+}while(条件)
+
+console.log(2)执行代码至少会执行一次，执行代码在条件被测试前执行一次，如果满足条件继续执行，如果不满足，则跳出。
+</code></pre><h2 id="javascript-Break-containue"><a href="#javascript-Break-containue" class="headerlink" title="javascript Break containue"></a>javascript Break containue</h2><h3 id="Break语句"><a href="#Break语句" class="headerlink" title="Break语句"></a>Break语句</h3><p>用于跳出循环，执行循环外的代码，（只用于循环和switch）</p>
+<h3 id="containue语句"><a href="#containue语句" class="headerlink" title="containue语句"></a>containue语句</h3><p>中断循环中的迭代，（只用于循环）</p>
+<h2 id="javascript-typeof-null-undefined"><a href="#javascript-typeof-null-undefined" class="headerlink" title="javascript typeof    null     undefined"></a>javascript typeof    null     undefined</h2><h3 id="typeof-操作符"><a href="#typeof-操作符" class="headerlink" title="typeof 操作符"></a>typeof 操作符</h3><p>typeof操作符用来检测变量的数据类型</p>
+<pre><code>typeof &quot;john&quot;                    //返回string
+typeof 3.14                        //返回number
+typeof fasle                    //返回boolean
+typeof [1,2,3]                    //返回object
+typeof {name:&quot;john&quot;,age:&quot;23&quot;}    //返回object
+</code></pre><h3 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h3><p>在javascript中null    表示”什么<br>都没有”。<br>null是一个只有一个值的特殊类型。表示一个空对象引用。</p>
+<pre><code>typeof null                      //返回值object
+
+可以设置为null来清空对象
+</code></pre><h3 id="Undefined"><a href="#Undefined" class="headerlink" title="Undefined"></a>Undefined</h3><p>在javascript中，Undefined是一个没有设置值的  <strong>变量</strong></p>
+<pre><code>var person;
+typeof person                      //返回值Undefined
+</code></pre><h3 id="Null和Undefined区别"><a href="#Null和Undefined区别" class="headerlink" title="Null和Undefined区别"></a>Null和Undefined区别</h3><pre><code>typeof Undefined                //Undefined
+typeof null                        //object
+null===Undefined                //fasle
+null==Undefined                    //true
+</code></pre><h2 id="javascript-类型转换"><a href="#javascript-类型转换" class="headerlink" title="javascript 类型转换"></a>javascript 类型转换</h2><p>在javascript中有五种数据类型</p>
+<ol>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>object</li>
+<li>function</li>
+</ol>
+<p>3种对象类型</p>
+<ol>
+<li>Object</li>
+<li>Date</li>
+<li>Array</li>
+</ol>
+<p>2个不包含任何值的数据类类型</p>
+<ol>
+<li>null</li>
+<li>undefined</li>
+</ol>
+<p>我们可以使用typeof来查看变量的数据类型</p>
+<pre><code>typeof &quot;john&quot;                    //返回string
+typeof 3.14                        //返回number
+typeof NaN                        //返回number
+typeof fasle                    //返回boolean
+typeof [1,2,3]                    //返回object
+typeof {name:&quot;john&quot;,age:&quot;23&quot;}    //返回object
+typeof new  Date（）                //返回string
+typeof fucntion(){}                //返回number
+typeof myCar                    //返回undefined
+typeof null                        //返回object
+</code></pre><p>这里我们需要注意的是：</p>
+<ol>
+<li>NaN的数据类型是：number</li>
+<li>数组（Array）的数据类类型是 object</li>
+<li>日期（Date）的数据类类型是  object</li>
+<li>null       的数据类类型是  object</li>
+<li>未定义的变量的数据类型是    undefined</li>
+</ol>
+<p><strong>constructor</strong><br>返回所有javascript变量的构造函数</p>
+<pre><code>&quot;john&quot;.constructor                        //返回函数 String（）{[native code]}
+(3.14).constructor                        //返回函数 Number（）{[native code]}
+false.constructor                        //返回函数 Boolean（）{[native code]}
+[1,2,3,4].constructor                    //返回函数 Array（）{[native code]}
+{name:&quot;john&quot;,age:&quot;23&quot;}.constructor        //返回函数 Object（）{[native code]}
+new Date().constructor                    //返回函数 Date（）{[native code]}
+fucntion(){}.constructor                //返回函数 Fucntion（）{[native code]}
+
+可以使用constructor属性来查看对象是否为数组   或是   日期
+
+这里有两个小函数可以用
+</code></pre><p>检测是否为数组对象</p>
+<pre><code>function isArray(myArray){
+    return myArray.constructor.toString.indexof(&quot;Array&quot;) &gt; -1;
+}
+</code></pre><p>检测是否为日期对象</p>
+<pre><code>function isDate(myDate){
+    return myDate.constructor.toString.indexof(&quot;Date&quot;) &gt; -1;
+}
+</code></pre><h1 id="javascript-类型转换-1"><a href="#javascript-类型转换-1" class="headerlink" title="javascript 类型转换"></a>javascript 类型转换</h1><p>转换方式：</p>
+<ol>
+<li>通过使用javscript函数转换</li>
+<li>通过javascript自身转换</li>
+</ol>
+<h2 id="将数组转换为字符串"><a href="#将数组转换为字符串" class="headerlink" title="将数组转换为字符串"></a>将数组转换为字符串</h2><p>全局使用string()函数</p>
+<pre><code>String(x)            //将变量 x 转换为字符串并且返回
+String(123)            //将数字 123 转换为字符串并且返回
+String(100 + 123)    //将数学表达式 转换为字符串并且返回’
+</code></pre><p>tostring() 也有同样的效果</p>
+<h2 id="将布尔值转换为字符串"><a href="#将布尔值转换为字符串" class="headerlink" title="将布尔值转换为字符串"></a>将布尔值转换为字符串</h2><p>全局使用string()函数</p>
+<pre><code>String(false)            //返回&quot;false&quot;
+String(true)            //返回&quot;true&quot;    
+</code></pre><p>tostring() 也有同样的效果</p>
+<pre><code>false.tostring()        //返回&quot;false&quot;
+true.tostring()            //返回&quot;true&quot;    
+</code></pre><h2 id="将日期转换为字符串"><a href="#将日期转换为字符串" class="headerlink" title="将日期转换为字符串"></a>将日期转换为字符串</h2><p>全局使用string()函数</p>
+<pre><code>String(Date () )            //返回 Thu jul 17 2016 15:38:20 GMT+0200 (W. Europe Datlight Time)
+</code></pre><p>tostring() 也有同样的效果</p>
+<h2 id="将字符串转换为数字"><a href="#将字符串转换为数字" class="headerlink" title="将字符串转换为数字"></a>将字符串转换为数字</h2><ol>
+<li>全局的方法Number()可以将字符串转换为数字</li>
+<li>字符串包含数字（如：”3.14”） 转换为数字(如3.14)</li>
+<li>空字符串转换为 0</li>
+<li>其他字符串会转换为NaN（不是个数字）  </li>
+</ol>
+<pre><code>Number(&quot;3.14&quot;)        //3.14
+Number(&quot; &quot;)            //0
+Number(&quot;&quot;)            //0
+Number(&quot;99 88&quot;)        //NaN
+
+parFloat()            //解析一个字符串 ，并返回一个浮点数
+parseint()            //解析一个字符串 ，并返回一个整数
+</code></pre><ol>
+<li><p>一元运算符  +</p>
+<pre><code>Operator + 可用于将变量转换为数字
+
+var x = &quot;5&quot;    //x是一个字符串
+var y= + x ;   //y是一个数字    
+
+或者
+
+var x = &quot;john&quot;    //x是一个字符串
+var y= + x ;   //y是一个数字    （NaN）
+</code></pre></li>
+</ol>
+<h2 id="将布尔值转换为数字"><a href="#将布尔值转换为数字" class="headerlink" title="将布尔值转换为数字"></a>将布尔值转换为数字</h2><p>全局的方法Number()可以将字符串转换为数字</p>
+<pre><code>Number(fasle)        //返回0
+Number(true)        //返回1
+</code></pre><h2 id="将日期转换为数字"><a href="#将日期转换为数字" class="headerlink" title="将日期转换为数字"></a>将日期转换为数字</h2><p>全局的方法Number()可以将字符串转换为数字</p>
+<pre><code>d= new Date（）；
+Number（d）  //返回值  1404568037739
+</code></pre><p>日期方法getTime()也有同样的效果</p>
+<pre><code>d= new Date（）；
+d.getTime()    //返回值  1404568037739
+</code></pre><h2 id="自动转换类型-Type-Conversion"><a href="#自动转换类型-Type-Conversion" class="headerlink" title="自动转换类型 Type Conversion"></a>自动转换类型 Type Conversion</h2><p>当javascript尝试操作一个“错误”的数据类型时候，会自动的那个转换为“正确”的数据类型</p>
+<pre><code>5 + null    //返回5
+&quot;5&quot; + null    //返回5null 
+&quot;5&quot; + 1    //返回&quot;51&quot;
+&quot;5&quot; - 1    //返回4
+</code></pre><h2 id="自动转换为字符串"><a href="#自动转换为字符串" class="headerlink" title="自动转换为字符串"></a>自动转换为字符串</h2><pre><code>当尝试输出的对象或一个变量是javascript会自动调用变量的方法toString（）方法
+</code></pre>
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/07/javascript-study01/" rel="next" title="javascript-study01">
+                <i class="fa fa-chevron-left"></i> javascript-study01
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/08/javascript-study03/" rel="prev" title="javascript-study03">
+                javascript-study03 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/04/07/javascript-study02/"
+     data-title="javascript-study02"
+     data-content=""
+     data-url="http://wujieBlog.github.io/2016/04/07/javascript-study02/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/07/javascript-study02/"
+           data-title="javascript-study02" data-url="http://wujieBlog.github.io/2016/04/07/javascript-study02/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="cui wujie" />
+          <p class="site-author-name" itemprop="name">cui wujie</p>
+          <p class="site-description motion-element" itemprop="description">花逞春光，一番雨，一番风，终归尘土;竹坚雅操，几朝霜几朝雪，傲就琅矸</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/cwjie0229/" target="_blank">
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/cwjiewb/" target="_blank">
+                  
+                  WeiBo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/cwujie" target="_blank">
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/cui-wu-jie-7" target="_blank">
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://cwjie0229.github.io" target="_blank">
+                  
+                  Resume
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript-比较和逻辑运算符"><span class="nav-number">1.</span> <span class="nav-text">javascript 比较和逻辑运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#比较运算符"><span class="nav-number">1.1.</span> <span class="nav-text">比较运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">1.2.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件运算符"><span class="nav-number">1.3.</span> <span class="nav-text">条件运算符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript语句"><span class="nav-number">2.</span> <span class="nav-text">javascript语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#if-……else"><span class="nav-number">2.1.</span> <span class="nav-text">if ……else</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript-switch"><span class="nav-number">2.2.</span> <span class="nav-text">Javascript switch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript-for"><span class="nav-number">2.3.</span> <span class="nav-text">Javascript for</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不同类型的循环"><span class="nav-number">2.3.1.</span> <span class="nav-text">不同类型的循环</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript-while"><span class="nav-number">2.4.</span> <span class="nav-text">Javascript while</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript-do-while"><span class="nav-number">2.5.</span> <span class="nav-text">Javascript do/while</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-Break-containue"><span class="nav-number">2.6.</span> <span class="nav-text">javascript Break containue</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Break语句"><span class="nav-number">2.6.1.</span> <span class="nav-text">Break语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#containue语句"><span class="nav-number">2.6.2.</span> <span class="nav-text">containue语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-typeof-null-undefined"><span class="nav-number">2.7.</span> <span class="nav-text">javascript typeof    null     undefined</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#typeof-操作符"><span class="nav-number">2.7.1.</span> <span class="nav-text">typeof 操作符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Null"><span class="nav-number">2.7.2.</span> <span class="nav-text">Null</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Undefined"><span class="nav-number">2.7.3.</span> <span class="nav-text">Undefined</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Null和Undefined区别"><span class="nav-number">2.7.4.</span> <span class="nav-text">Null和Undefined区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-类型转换"><span class="nav-number">2.8.</span> <span class="nav-text">javascript 类型转换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript-类型转换-1"><span class="nav-number">3.</span> <span class="nav-text">javascript 类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将数组转换为字符串"><span class="nav-number">3.1.</span> <span class="nav-text">将数组转换为字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将布尔值转换为字符串"><span class="nav-number">3.2.</span> <span class="nav-text">将布尔值转换为字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将日期转换为字符串"><span class="nav-number">3.3.</span> <span class="nav-text">将日期转换为字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将字符串转换为数字"><span class="nav-number">3.4.</span> <span class="nav-text">将字符串转换为数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将布尔值转换为数字"><span class="nav-number">3.5.</span> <span class="nav-text">将布尔值转换为数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将日期转换为数字"><span class="nav-number">3.6.</span> <span class="nav-text">将日期转换为数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动转换类型-Type-Conversion"><span class="nav-number">3.7.</span> <span class="nav-text">自动转换类型 Type Conversion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动转换为字符串"><span class="nav-number">3.8.</span> <span class="nav-text">自动转换为字符串</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cui wujie</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"iissnan-notes"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

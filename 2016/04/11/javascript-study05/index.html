@@ -1,0 +1,991 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="javascript 函数
+定义：javascript 使用关键字function 定义函数 
+函数可以通过声明定义，也可以是一个表达式。
+
+函数的声明
+函数的声明  function funtionName(){函数执行的代码；    
+  }
+备注：函数声明后不会立即执行，需要调用
+举例：
+function myfunction(a,b){
+     return a * b;
+}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript-study05">
+<meta property="og:url" content="http://wujieBlog.github.io/2016/04/11/javascript-study05/index.html">
+<meta property="og:site_name" content="MrCui's Blog">
+<meta property="og:description" content="javascript 函数
+定义：javascript 使用关键字function 定义函数 
+函数可以通过声明定义，也可以是一个表达式。
+
+函数的声明
+函数的声明  function funtionName(){函数执行的代码；    
+  }
+备注：函数声明后不会立即执行，需要调用
+举例：
+function myfunction(a,b){
+     return a * b;
+}">
+<meta property="og:updated_time" content="2016-04-11T01:04:31.525Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript-study05">
+<meta name="twitter:description" content="javascript 函数
+定义：javascript 使用关键字function 定义函数 
+函数可以通过声明定义，也可以是一个表达式。
+
+函数的声明
+函数的声明  function funtionName(){函数执行的代码；    
+  }
+备注：函数声明后不会立即执行，需要调用
+举例：
+function myfunction(a,b){
+     return a * b;
+}">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> javascript-study05 | MrCui's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MrCui's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">前端工程狮</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/../http:/cwjie0229.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                javascript-study05
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-11T09:02:17+08:00" content="2016-04-11">
+              2016-04-11
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/11/javascript-study05/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/11/javascript-study05/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="javascript-函数"><a href="#javascript-函数" class="headerlink" title="javascript 函数"></a>javascript 函数</h1><ul>
+<li>定义：javascript 使用关键字function 定义函数 </li>
+<li>函数可以通过声明定义，也可以是一个表达式。</li>
+</ul>
+<h2 id="函数的声明"><a href="#函数的声明" class="headerlink" title="函数的声明"></a>函数的声明</h2><ul>
+<li>函数的声明<br>  function funtionName(){<pre><code>函数执行的代码；    
+</code></pre>  }</li>
+<li><p>备注：函数声明后不会立即执行，需要调用</p>
+<pre><code>举例：
+function myfunction(a,b){
+     return a * b;
+}
+</code></pre><a id="more"></a>
+<h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h2></li>
+<li><p>javascript函数可以通过一个表达式定义，函数表达式可以存储在变量中</p>
+<pre><code>var x = function (a,b) {return a * b;}
+</code></pre></li>
+<li><p>在函数表达是中，变量也可以作为一种函数来使用</p>
+<pre><code>var x = function (a,b) {return a * b};
+var y=x(3,4);
+</code></pre></li>
+</ul>
+<h2 id="Function-构造函数"><a href="#Function-构造函数" class="headerlink" title="Function()构造函数"></a>Function()构造函数</h2><ul>
+<li><p>函数同样也可以通过内置javascript函数来构造器（Function）定义</p>
+<pre><code>var myFunction = new Function(&quot;a&quot;,&quot;b&quot;,&quot;return a * b&quot;)；
+var x=myFunction(3,4);
+</code></pre></li>
+<li><p>在实际运用中我们不比携程上面这种构造函数，写成一下这种就可以了</p>
+<pre><code>var myFunction =function (a,b) {return a * b}；
+var x=myFunction(3,4);
+</code></pre></li>
+</ul>
+<h2 id="函数提升"><a href="#函数提升" class="headerlink" title="函数提升"></a>函数提升</h2><ul>
+<li><p>函数可以在声明之前调用</p>
+<pre><code>myFunction(3,4);
+function myFunction(a,b) 
+{
+    return a * b
+}；
+</code></pre></li>
+</ul>
+<h2 id="自调用函数"><a href="#自调用函数" class="headerlink" title="自调用函数"></a>自调用函数</h2><ul>
+<li>函数表达式可以”自调用”</li>
+<li>自调用表达式会自动调用</li>
+<li>如果表达式后面函数（） 则会自动调用</li>
+<li><p>通过添加括号 来说明是一个函数表达式</p>
+<pre><code>（function （） {
+    var x = &quot;hello !! &quot;;//我会调用我自己
+}）
+</code></pre></li>
+</ul>
+<h2 id="函数可以作为一个值使用"><a href="#函数可以作为一个值使用" class="headerlink" title="函数可以作为一个值使用"></a>函数可以作为一个值使用</h2><ul>
+<li><p>javascript函数作为一个值来使用</p>
+<pre><code>function myFunction(a,b){
+    return a * b;
+}
+var x = myFunction(3,4);
+</code></pre></li>
+</ul>
+<ul>
+<li><p>javascript函数作为一个表达式来使用</p>
+<pre><code>function myFunction(a,b){
+    return a * b;
+}
+var x = myFunction(3,4) * 2;
+</code></pre></li>
+</ul>
+<h2 id="函数是对象"><a href="#函数是对象" class="headerlink" title="函数是对象"></a>函数是对象</h2><ul>
+<li>在javascript使用typeof 操作符判断函数类型将返回”function”</li>
+<li>但是javascript函数描述作为一个对象更为妥善</li>
+<li>javascript函数有属性和方法</li>
+<li><p>arguments属性返回函数调用过程接受到的参数个数</p>
+<pre><code>function myFunction(a,b){
+    return argument.length;    
+}
+</code></pre></li>
+<li><p>toString()方法将函数作为一个字符串返回</p>
+<pre><code>function myFunction(a,b){
+    return a * b;
+}
+
+var txt myFunction.toString();
+</code></pre></li>
+</ul>
+<h1 id="Javascrpt-函数参数"><a href="#Javascrpt-函数参数" class="headerlink" title="Javascrpt 函数参数"></a>Javascrpt 函数参数</h1><ul>
+<li><p>Javascript 函数对参数的值(argument)没有进行任何的检查</p>
+<h2 id="函数显式参数与隐藏参数"><a href="#函数显式参数与隐藏参数" class="headerlink" title="函数显式参数与隐藏参数"></a>函数显式参数与隐藏参数</h2></li>
+<li><p>函数显式参数在函数定义的时列出</p>
+</li>
+<li>函数隐藏参数（arguments）在函数调用时传递给函数真正的值</li>
+</ul>
+<h2 id="参数规则"><a href="#参数规则" class="headerlink" title="参数规则"></a>参数规则</h2><ul>
+<li>Javascript函数定义是参数没有指定的数据类型</li>
+<li>Javascript函数对隐藏参数（arguments）没有进行检测</li>
+<li>Javascript函数对隐藏参数（arguments）的个数没有进行检测<h2 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h2></li>
+<li><p>如果函数在调用时缺少参数，参数会默认设置为： undefined</p>
+<pre><code>function myFunction（x,y）{
+    if(y==undefined){
+        y = 0;
+    }
+}
+</code></pre><h2 id="Arguments-对象"><a href="#Arguments-对象" class="headerlink" title="Arguments 对象"></a>Arguments 对象</h2></li>
+<li>javascript函数有个内置对象arguments对象</li>
+<li>argument对象包含了函数调用的参数数组</li>
+<li><p>通过这种方式你可以很方便的找到最后一个参数的值</p>
+<pre><code>x = findMax(1,123,500,44,88);
+
+function findMax(){
+    var i , max =0;
+    for(i = 0;i&lt;arguments.length;i++){
+        if(arguments[i] &gt; max){
+            max=arguments[i];    
+        }
+    }
+    return max;
+}
+</code></pre></li>
+</ul>
+<h2 id="通过值传递参数"><a href="#通过值传递参数" class="headerlink" title="通过值传递参数"></a>通过值传递参数</h2><ul>
+<li>在函数中调用的参数是函数的参数</li>
+<li>如果函数修改参数的值，将不会修改参数的原始值</li>
+<li>函数参数的修改不会影响函数外部的变量</li>
+</ul>
+<h2 id="通过对象来传递参数"><a href="#通过对象来传递参数" class="headerlink" title="通过对象来传递参数"></a>通过对象来传递参数</h2><ul>
+<li>在Javascript中，可以引用对象的值</li>
+<li>我们在函数内容修改对象的属性就会修改其初始的值</li>
+<li>修改对象的属性可以做用于函数的外部</li>
+</ul>
+<h1 id="javascript-函数调用"><a href="#javascript-函数调用" class="headerlink" title="javascript 函数调用"></a>javascript 函数调用</h1><h2 id="Javascript函数有四种调用方式"><a href="#Javascript函数有四种调用方式" class="headerlink" title="Javascript函数有四种调用方式"></a>Javascript函数有四种调用方式</h2><h2 id="this关键字"><a href="#this关键字" class="headerlink" title="this关键字"></a>this关键字</h2><pre><code>- 一般而言，在javascript中，在this指向函数执行时的当前对象
+</code></pre><h2 id="调用Javascript函数"><a href="#调用Javascript函数" class="headerlink" title="调用Javascript函数"></a>调用Javascript函数</h2><pre><code>- 在HTML中默认的全局对象是HTML页面本身，所以函数属于 HTML页面；
+- 在浏览器中的页面对象是浏览器窗口（window对象），以上函数会自动变为window对象的函数；
+- myFunction（） 和window.myFunction()是一样的；
+</code></pre><h2 id="作为一个函数调用"><a href="#作为一个函数调用" class="headerlink" title="作为一个函数调用"></a>作为一个函数调用</h2><h2 id="全局对象"><a href="#全局对象" class="headerlink" title="全局对象"></a>全局对象</h2><pre><code>- 当函数没有被自身的对象调用时，this的值就会变成全局对象
+- 在web 浏览器中全部浏览器窗口（window对象）
+</code></pre><h2 id="函数作为方法调用"><a href="#函数作为方法调用" class="headerlink" title="函数作为方法调用"></a>函数作为方法调用</h2><pre><code>- 在Javascript中你可以将函数定义为对象的方法
+
+    var myobject = {
+        firstName:&quot;john&quot;,
+        lastName：&quot;Doe&quot;,
+        fullName:function(){
+            return this.firstName+ &quot;&quot;+this.lastName;
+        }
+    } 
+    myobject.fullName()；
+
+    fullName方法是一个函数，函数属于对象。myobject是函数的所有。
+    this对象，拥有Javascript代码，例子中this的值为myobject对象
+    修改fullName方法并返回this的值
+
+    var myobject = {
+        firstName:&quot;john&quot;,
+        lastName：&quot;Doe&quot;,
+        fullName:function(){
+            return this;
+        }
+    } 
+    myobject.fullName()；//返回[object  Object](所有者对象)
+</code></pre><h2 id="使用构造函数调用函数"><a href="#使用构造函数调用函数" class="headerlink" title="使用构造函数调用函数"></a>使用构造函数调用函数</h2><pre><code>- 如果函数调用前使用了new关键字，则是调用了构造函数
+- 这是Javascript函数是重新创建的对象
+
+        function myFunction(arg1,arg2){
+            this.firstName=arg1;
+            this.lastName=arg2;
+
+        }    
+
+        var x = new myFunction(&quot;john&quot;,&quot;Doe&quot;);
+        x.firstName;        //返回    john
+</code></pre><h2 id="作为函数方法调用函数"><a href="#作为函数方法调用函数" class="headerlink" title="作为函数方法调用函数"></a>作为函数方法调用函数</h2><pre><code>在Javascript中，函数是对象，Javascript函数有它的属性和方法
+call()和apply()是预定义的函数方法，两个方法可用于调用函数，两个方法的第一个参数必须是对象本身。
+
+function myFunction(a,b){
+    return a * b;
+}
+myFunction.call(myObject,10,2);   //返回20
+
+
+function myFunction(a,b){
+    return a * b;
+}
+myArray=[10,2];
+myFunction.apply(myObject,myArray);//返回20
+</code></pre><ul>
+<li>两个方法调用了对象本身作为第一个参数，两者区别在于第二个参数：apply传入的是一个参数数组，也就是将多个参数组合作为一个数组传入，<br>二call则作为call的参数传入，（从第二个开始）</li>
+<li>在Javascript严格的模式(strit mode)下，在调用参数时第一个参数会成为this的值，即使该参数不是一个对象</li>
+<li>在Javascript非严格的模式(non-strit mode)下，如果第一个参数的值是null或undefined，它将使用全局对象替代</li>
+</ul>
+<h1 id="javascript-闭包"><a href="#javascript-闭包" class="headerlink" title="javascript 闭包"></a>javascript <strong>闭包</strong></h1><p>Javascript变量可以是全局变量或局部变量 私有变量可以使用到闭包</p>
+<h2 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h2><p>函数可以访问由函数内部定义的变量</p>
+<pre><code>实例1    function myfunction(){
+            var a = 4;
+            return a * a;
+        }
+</code></pre><p>函数可以访问由函数外部定义的变量    </p>
+<pre><code>实例2    var a = 4;
+        function myfunction(){
+            return a * a;
+        }
+</code></pre><ul>
+<li>后面实例2中，a是一个全局变量，在web页面中全局变量属于window对象，</li>
+<li>全局变量应用于页面上所有的脚本</li>
+<li>在实例1中，a是一个局部变量</li>
+<li>局部变量只能用于定义函数的内部，对于其他的函数或者脚本代码是不可用的</li>
+<li>全局和局部变量即便名称相同，他们是两个不同变量，修改其中一个，不会影响另一个的值</li>
+</ul>
+<h2 id="变量的生命周期"><a href="#变量的生命周期" class="headerlink" title="变量的生命周期"></a>变量的生命周期</h2><ul>
+<li>全局变量的作用是全局性的，全局便利那个处处都在</li>
+<li>在函数内部的声明的变量，旨在函数内部起作用，这些变量是局部变量，</li>
+<li>作用域是局部性的，函数的参数也是局部性的，只在函数内部起作用</li>
+</ul>
+<h2 id="Javascript内嵌函数"><a href="#Javascript内嵌函数" class="headerlink" title="Javascript内嵌函数"></a>Javascript内嵌函数</h2><ul>
+<li>解决计数器的问题</li>
+<li>所有函数都能访问全局变量</li>
+<li>在Javascript中，所有函数都能访问他们上一层的作用域</li>
+<li>Javascript支持内嵌函数，嵌套函数可以访问上一层的函数变量</li>
+<li><p>内嵌函数 plus()keyi fangwen 父函数的<strong>counter变量</strong></p>
+<p>  function add(){</p>
+<pre><code>var counter = 0;
+fucntion plus(){counter += 1;}    
+plus();
+return counter;
+</code></pre><p>  }</p>
+<p>  我们在外部访问plus(),我们需要确保counter = 0只执行一次，就OK了，这里我们就需要javascript中的<strong>闭包</strong>了。</p>
+</li>
+</ul>
+<h2 id="javascript闭包"><a href="#javascript闭包" class="headerlink" title="javascript闭包"></a>javascript闭包</h2><pre><code>var add = (function (){
+    var counter = 0;
+    return fucntion(){return counter += 1;}
+}) ();
+
+add();
+add();
+add();
+
+
+//计数器为3
+
+实例解析
+
+变量add指定了函数自我调用的返回字值
+自我调用函数只执行了一次，设置计数器为0，并且返回函数表达式
+add变量可以作为一个函数使用，它可以访问函数上一层作用域的计算器
+这叫组哦Javascript的闭包 ，使得函数的私有变量变为可能
+</code></pre><p>闭包是可访问上一层函数作用域里的变量的函数，以便上一层函数已经关闭</p>
+<h2 id="闭包的理解"><a href="#闭包的理解" class="headerlink" title="闭包的理解"></a>闭包的理解</h2><p>对于闭包的理解很重要，很多高级的应用都要依靠闭包来实现</p>
+<p>一、变量的作用域</p>
+<ul>
+<li>要理解闭包，首先必须理解Javascript特殊的变量作用域。</li>
+<li>变量的作用域无非就是两种：全局变量和局部变量。</li>
+<li><p>Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。</p>
+<pre><code>var n=999;
+function f1(){
+　　　　alert(n);
+}
+f1(); // 999
+</code></pre></li>
+<li><p>另一方面，在函数外部自然无法读取函数内的局部变量。</p>
+<pre><code>function f1(){var n=999;}alert(n); // error
+</code></pre></li>
+<li><p>这里有一个地方需要注意，函数内部声明变量的时候，一定要使用var命令。如果不用的话，你实际上声明了一个全局变量</p>
+<pre><code>function f1(){n=999;}　f1();
+</code></pre></li>
+</ul>
+<h3 id="二、如何从外部读取局部变量"><a href="#二、如何从外部读取局部变量" class="headerlink" title="二、如何从外部读取局部变量　　　　"></a>二、如何从外部读取局部变量　　　　</h3><ul>
+<li><p>出于种种原因，我们有时候需要得到函数内的局部变量。但是，前面已经说过了，正常情况下，这是办不到的，只有通过变通方法才能实现。<br>那就是在函数的内部，再定义一个函数。</p>
+<pre><code>function f1(){
+    var n = 999;
+    fucntion f2(){
+        alert(n)； //999
+    }                
+}
+</code></pre></li>
+<li><p>在上面的代码中，函数f2就被包括在函数f1内部，这时f1内部的所有局部变量，对f2都是可见的。但是反过来就不行，f2内部的局部变量，对f1就是不可见的。这就是Javascript语言特有的”链式作用域”结构（chain scope），子对象会一级一级地向上寻找所有父对象的变量。所以，父对象的所有变量，对子对象都是可见的，反之则不成立。</p>
+</li>
+<li>既然f2可以读取f1中的局部变量，那么只要把f2作为返回值，我们不就可以在f1外部读取它的内部变量了吗！</li>
+</ul>
+<pre><code>function f1(){
+    var n = 999;
+    fucntion f2(){
+        alert(n)； //999
+    }    
+    return f2;            
+}
+
+var result=f1();
+
+result(); // 999
+</code></pre><h3 id="三、闭包的概念"><a href="#三、闭包的概念" class="headerlink" title="三、闭包的概念"></a>三、闭包的概念</h3><ul>
+<li>上一节代码中的f2函数，就是闭包。</li>
+<li>各种专业文献上的”闭包”（closure）定义非常抽象，很难看懂。我的理解是，闭包就是能够读取其他函数内部变量的函数。</li>
+<li><p>由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成”定义在一个函数内部的函数”。</p>
+</li>
+<li><p>所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。</p>
+</li>
+</ul>
+<h3 id="四、闭包的用途"><a href="#四、闭包的用途" class="headerlink" title="四、闭包的用途"></a>四、闭包的用途</h3><ul>
+<li>闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。</li>
+</ul>
+<p>　　</p>
+<pre><code>function f1(){
+    var n = 999;
+    nAdd=function(){n+=1}
+
+    fucntion f2(){
+        alert(n)； //999
+    }    
+    return f2;            
+}
+
+var result=f1();
+
+result(); // 999
+nAdd();
+result(); //1000
+</code></pre><ul>
+<li>在这段代码中，result实际上就是闭包f2函数。它一共运行了两次，第一次的值是999，第二次的值是1000。这证明了，函数f1中的局部变量n一直保存在内存中，并没有在f1调用后被自动清除。</li>
+<li>为什么会这样呢？原因就在于f1是f2的父函数，而f2被赋给了一个全局变量，这导致f2始终在内存中，而f2的存在依赖于f1，因此f1也始终在内存中，不会在调用结束后，被垃圾回收机制（garbage collection）回收。</li>
+<li><p>这段代码中另一个值得注意的地方，就是”nAdd=function(){n+=1}”这一行，首先在nAdd前面没有使用var关键字，因此nAdd是一个全局变量，而不是局部变量。其次，nAdd的值是一个匿名函数（anonymous function），而这个匿名函数本身也是一个闭包，所以nAdd相当于是一个setter，可以在函数外部对函数内部的局部变量进行操作。
+  　        </p>
+<h3 id="五、使用闭包的注意点"><a href="#五、使用闭包的注意点" class="headerlink" title="五、使用闭包的注意点    　"></a>五、使用闭包的注意点    　</h3></li>
+<li><p>1）由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。</p>
+</li>
+<li>2）闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</li>
+</ul>
+<h3 id="六、思考题"><a href="#六、思考题" class="headerlink" title="六、思考题"></a>六、思考题</h3><ul>
+<li><p>如果你能理解下面两段代码的运行结果，应该就算理解闭包的运行机制了<br>代码片段一。</p>
+<pre><code>var name = &quot;The Window&quot;;
+　　var object = {
+　　　　name : &quot;My Object&quot;,
+　　　　getNameFunc : function(){
+　　　　　　return function(){
+　　　　　　　　return this.name;
+　　　　　　};
+　　　　}
+　　};
+　　alert(object.getNameFunc()());
+</code></pre></li>
+</ul>
+<p>代码片段二。</p>
+<pre><code>var name = &quot;The Window&quot;;
+　　var object = {
+　　　　name : &quot;My Object&quot;,
+　　　　getNameFunc : function(){
+　　　　　　var that = this;
+　　　　　　return function(){
+　　　　　　　　return that.name;
+　　　　　　};
+　　　　}
+　　};
+　　alert(object.getNameFunc()());
+</code></pre><p>如果还需要了解可以据需探寻<br><a href="http://www.php100.com/html/it/focus/2014/1113/7796.html" target="_blank" rel="external">javascript 闭包详解</a><br><br><a href="http://www.cnblogs.com/dolphinX/archive/2012/09/29/2708763.html" target="_blank" rel="external">JavaScript 闭包究竟是什么</a><br><br><a href="http://kb.cnblogs.com/page/110782/" target="_blank" rel="external">Javascript闭包</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/08/javascript-study04/" rel="next" title="javascript-study04">
+                <i class="fa fa-chevron-left"></i> javascript-study04
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/12/javascript-study06/" rel="prev" title="javascript-study06">
+                javascript-study06 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/04/11/javascript-study05/"
+     data-title="javascript-study05"
+     data-content=""
+     data-url="http://wujieBlog.github.io/2016/04/11/javascript-study05/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/11/javascript-study05/"
+           data-title="javascript-study05" data-url="http://wujieBlog.github.io/2016/04/11/javascript-study05/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="cui wujie" />
+          <p class="site-author-name" itemprop="name">cui wujie</p>
+          <p class="site-description motion-element" itemprop="description">花逞春光，一番雨，一番风，终归尘土;竹坚雅操，几朝霜几朝雪，傲就琅矸</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/cwjie0229/" target="_blank">
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/cwjiewb/" target="_blank">
+                  
+                  WeiBo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/cwujie" target="_blank">
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/cui-wu-jie-7" target="_blank">
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://cwjie0229.github.io" target="_blank">
+                  
+                  Resume
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript-函数"><span class="nav-number">1.</span> <span class="nav-text">javascript 函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的声明"><span class="nav-number">1.1.</span> <span class="nav-text">函数的声明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数表达式"><span class="nav-number">1.2.</span> <span class="nav-text">函数表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Function-构造函数"><span class="nav-number">1.3.</span> <span class="nav-text">Function()构造函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数提升"><span class="nav-number">1.4.</span> <span class="nav-text">函数提升</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自调用函数"><span class="nav-number">1.5.</span> <span class="nav-text">自调用函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数可以作为一个值使用"><span class="nav-number">1.6.</span> <span class="nav-text">函数可以作为一个值使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数是对象"><span class="nav-number">1.7.</span> <span class="nav-text">函数是对象</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Javascrpt-函数参数"><span class="nav-number">2.</span> <span class="nav-text">Javascrpt 函数参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数显式参数与隐藏参数"><span class="nav-number">2.1.</span> <span class="nav-text">函数显式参数与隐藏参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数规则"><span class="nav-number">2.2.</span> <span class="nav-text">参数规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#默认参数"><span class="nav-number">2.3.</span> <span class="nav-text">默认参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Arguments-对象"><span class="nav-number">2.4.</span> <span class="nav-text">Arguments 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过值传递参数"><span class="nav-number">2.5.</span> <span class="nav-text">通过值传递参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过对象来传递参数"><span class="nav-number">2.6.</span> <span class="nav-text">通过对象来传递参数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript-函数调用"><span class="nav-number">3.</span> <span class="nav-text">javascript 函数调用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript函数有四种调用方式"><span class="nav-number">3.1.</span> <span class="nav-text">Javascript函数有四种调用方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#this关键字"><span class="nav-number">3.2.</span> <span class="nav-text">this关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用Javascript函数"><span class="nav-number">3.3.</span> <span class="nav-text">调用Javascript函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作为一个函数调用"><span class="nav-number">3.4.</span> <span class="nav-text">作为一个函数调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局对象"><span class="nav-number">3.5.</span> <span class="nav-text">全局对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数作为方法调用"><span class="nav-number">3.6.</span> <span class="nav-text">函数作为方法调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用构造函数调用函数"><span class="nav-number">3.7.</span> <span class="nav-text">使用构造函数调用函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作为函数方法调用函数"><span class="nav-number">3.8.</span> <span class="nav-text">作为函数方法调用函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript-闭包"><span class="nav-number">4.</span> <span class="nav-text">javascript 闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局变量"><span class="nav-number">4.1.</span> <span class="nav-text">全局变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的生命周期"><span class="nav-number">4.2.</span> <span class="nav-text">变量的生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript内嵌函数"><span class="nav-number">4.3.</span> <span class="nav-text">Javascript内嵌函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript闭包"><span class="nav-number">4.4.</span> <span class="nav-text">javascript闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包的理解"><span class="nav-number">4.5.</span> <span class="nav-text">闭包的理解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二、如何从外部读取局部变量"><span class="nav-number">4.5.1.</span> <span class="nav-text">二、如何从外部读取局部变量　　　　</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、闭包的概念"><span class="nav-number">4.5.2.</span> <span class="nav-text">三、闭包的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、闭包的用途"><span class="nav-number">4.5.3.</span> <span class="nav-text">四、闭包的用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、使用闭包的注意点"><span class="nav-number">4.5.4.</span> <span class="nav-text">五、使用闭包的注意点    　</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、思考题"><span class="nav-number">4.5.5.</span> <span class="nav-text">六、思考题</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cui wujie</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"iissnan-notes"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1204 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Functionss," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="javascript常用函数javascript在前端页面的重要性就不提了，我们在写页面的过程中不仅需要用到js框架，还会用到一些常用的自己编写的函数，这里我收集了一些常用的javascript函数可以供来参考使用，其中有一些来自WEB前端开发,还有一部分是自己写的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JsCommenFunctions">
+<meta property="og:url" content="http://wujieBlog.github.io/2016/04/19/JsCommenFunctions/index.html">
+<meta property="og:site_name" content="MrCui's Blog">
+<meta property="og:description" content="javascript常用函数javascript在前端页面的重要性就不提了，我们在写页面的过程中不仅需要用到js框架，还会用到一些常用的自己编写的函数，这里我收集了一些常用的javascript函数可以供来参考使用，其中有一些来自WEB前端开发,还有一部分是自己写的">
+<meta property="og:updated_time" content="2016-04-19T10:07:22.736Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JsCommenFunctions">
+<meta name="twitter:description" content="javascript常用函数javascript在前端页面的重要性就不提了，我们在写页面的过程中不仅需要用到js框架，还会用到一些常用的自己编写的函数，这里我收集了一些常用的javascript函数可以供来参考使用，其中有一些来自WEB前端开发,还有一部分是自己写的">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> JsCommenFunctions | MrCui's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MrCui's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">前端工程狮</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/../http:/cwjie0229.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JsCommenFunctions
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-19T17:55:51+08:00" content="2016-04-19">
+              2016-04-19
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/19/JsCommenFunctions/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/19/JsCommenFunctions/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="javascript常用函数"><a href="#javascript常用函数" class="headerlink" title="javascript常用函数"></a>javascript常用函数</h1><p>javascript在前端页面的重要性就不提了，我们在写页面的过程中不仅需要用到js框架，还会用到一些常用的自己编写的函数，这里我收集了一些常用的javascript函数可以供来参考使用，其中有一些来自<a href="http://www.css88.com/archives/5180" target="_blank" rel="external">WEB前端开发</a>,还有一部分是自己写的</p>
+<a id="more"></a>
+<h2 id="字符串长度截取"><a href="#字符串长度截取" class="headerlink" title="字符串长度截取"></a>字符串长度截取</h2><pre><code>function cutstr(str, len) {
+    var temp,
+        icount = 0,
+        patrn = /[^\x00-\xff]/，
+        strre = &quot;&quot;;
+    for (var i = 0; i &lt; str.length; i++) {
+        if (icount &lt; len - 1) {
+            temp = str.substr(i, 1);
+                if (patrn.exec(temp) == null) {
+                   icount = icount + 1
+            } else {
+                icount = icount + 2
+            }
+            strre += temp
+            } else {
+            break;
+        }
+    }
+    return strre + &quot;...&quot;
+}
+</code></pre><h2 id="去除空格"><a href="#去除空格" class="headerlink" title="去除空格"></a>去除空格</h2><pre><code>function trim(str,type){
+    var type=type||&quot;b&quot;;
+    /*判断需要去除空格的情况*/
+    if(type==&quot;l&quot;){
+        return str.replace(/^\s*/g,&quot;&quot;);//去除左边的空格
+    }else if(type==&quot;r&quot;){
+        return str.replace(/\s*$/g,&quot;&quot;);//去除右边的空格
+    }else if(type==&quot;b&quot;){
+        return str.replace(/^\s*|\s*$/g,&quot;&quot;);//去除左右边的空格
+    }else if(type==&quot;all&quot;){
+        return str.replace(/\s*/g,&quot;&quot;);//去除全部空格
+    }
+
+}
+</code></pre><h2 id="设置cookies"><a href="#设置cookies" class="headerlink" title="设置cookies"></a>设置cookies</h2><pre><code>function setCookie(name, value, Hours) {
+    var d = new Date();
+    var offset = 8;
+    var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+    var nd = utc + (3600000 * offset);
+    var exp = new Date(nd);
+    exp.setTime(exp.getTime() + Hours * 60 * 60 * 1000);
+    document.cookie = name + &quot;=&quot; + escape(value) + &quot;;path=/;expires=&quot; + exp.toGMTString() + &quot;;domain=360doc.com;&quot;
+}
+</code></pre><h2 id="获取cookies值"><a href="#获取cookies值" class="headerlink" title="获取cookies值"></a>获取cookies值</h2><pre><code>function getCookie(name) {
+    var arr = document.cookie.match(new RegExp(&quot;(^| )&quot; + name + &quot;=([^;]*)(;|$)&quot;));
+    if (arr != null) return unescape(arr[2]);
+    return null
+}
+</code></pre><h2 id="加入收藏夹"><a href="#加入收藏夹" class="headerlink" title="加入收藏夹"></a>加入收藏夹</h2><pre><code>function AddFavorite(sURL, sTitle) {
+    try {
+        window.external.addFavorite(sURL, sTitle)
+    } catch(e) {
+        try {
+            window.sidebar.addPanel(sTitle, sURL, &quot;&quot;)
+        } catch(e) {
+            alert(&quot;加入收藏失败，请使用Ctrl+D进行添加&quot;)
+        }
+    }
+}
+</code></pre><h2 id="设置为首页"><a href="#设置为首页" class="headerlink" title="设置为首页"></a>设置为首页</h2><pre><code>function setHomepage() {
+    if (document.all) {
+        document.body.style.behavior = &apos;url(#default#homepage)&apos;;
+        document.body.setHomePage(&apos;http://w3cboy.com&apos;)
+    } else if (window.sidebar) {
+        if (window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege(&quot;UniversalXPConnect&quot;)
+            } catch(e) {
+                alert(&quot;该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true&quot;)
+                }
+        }
+        var prefs = Components.classes[&apos;@mozilla.org/preferences-service;1&apos;].getService(Components.interfaces.nsIPrefBranch);
+        prefs.setCharPref(&apos;browser.startup.homepage&apos;, &apos;http://w3cboy.com&apos;)
+    }
+}
+</code></pre><h2 id="加载样式文件"><a href="#加载样式文件" class="headerlink" title="加载样式文件"></a>加载样式文件</h2><pre><code>function LoadStyle(url) {
+    try {
+        document.createStyleSheet(url)
+    } catch(e) {
+        var cssLink = document.createElement(&apos;link&apos;);
+        cssLink.rel = &apos;stylesheet&apos;;
+        cssLink.type = &apos;text/css&apos;;
+        cssLink.href = url;
+        var head = document.getElementsByTagName(&apos;head&apos;)[0];
+        head.appendChild(cssLink)
+    }
+}
+</code></pre><h2 id="返回脚本内容"><a href="#返回脚本内容" class="headerlink" title="返回脚本内容"></a>返回脚本内容</h2><pre><code>function evalscript(s) {
+    if(s.indexOf(&apos;&lt;script&apos;) == -1) return s;
+    var p = /&lt;script[^\&gt;]*?&gt;([^\x00]*?)&lt;\/script&gt;/ig;
+    var arr = [];
+    while(arr = p.exec(s)) {
+        var p1 = /&lt;script[^\&gt;]*?src=\&quot;([^\&gt;]*?)\&quot;[^\&gt;]*?(reload=\&quot;1\&quot;)?(?:charset=\&quot;([\w\-]+?)\&quot;)?&gt;&lt;\/script&gt;/i;
+        var arr1 = [];
+        arr1 = p1.exec(arr[0]);
+        if(arr1) {
+            appendscript(arr1[1], &apos;&apos;, arr1[2], arr1[3]);
+        } else {
+            p1 = /&lt;script(.*?)&gt;([^\x00]+?)&lt;\/script&gt;/i;
+            arr1 = p1.exec(arr[0]);
+            appendscript(&apos;&apos;, arr1[2], arr1[1].indexOf(&apos;reload=&apos;) != -1);
+        }
+    }
+    return s;
+}
+</code></pre><h2 id="清除脚本内容"><a href="#清除脚本内容" class="headerlink" title="清除脚本内容"></a>清除脚本内容</h2><pre><code>function stripscript(s) {
+    return s.replace(/&lt;script.*?&gt;.*?&lt;\/script&gt;/ig, &apos;&apos;);
+}
+</code></pre><h2 id="动态加载脚本文件"><a href="#动态加载脚本文件" class="headerlink" title="动态加载脚本文件"></a>动态加载脚本文件</h2><pre><code>function appendscript(src, text, reload, charset) {
+    var id = hash(src + text);
+    if(!reload &amp;&amp; in_array(id, evalscripts)) return;
+    if(reload &amp;&amp; $(id)) {
+        $(id).parentNode.removeChild($(id));
+    }
+
+    evalscripts.push(id);
+    var scriptNode = document.createElement(&quot;script&quot;);
+    scriptNode.type = &quot;text/javascript&quot;;
+    scriptNode.id = id;
+    scriptNode.charset = charset ? charset : (BROWSER.firefox ? document.characterSet : document.charset);
+    try {
+        if(src) {
+            scriptNode.src = src;
+            scriptNode.onloadDone = false;
+            scriptNode.onload = function () {
+                scriptNode.onloadDone = true;
+                JSLOADED[src] = 1;
+             };
+             scriptNode.onreadystatechange = function () {
+                 if((scriptNode.readyState == &apos;loaded&apos; || scriptNode.readyState == &apos;complete&apos;) &amp;&amp; !scriptNode.onloadDone) {
+                    scriptNode.onloadDone = true;
+                    JSLOADED[src] = 1;
+                }
+             };
+        } else if(text){
+            scriptNode.text = text;
+        }
+        document.getElementsByTagName(&apos;head&apos;)[0].appendChild(scriptNode);
+    } catch(e) {}
+}
+</code></pre><h2 id="跨浏览器绑定事件"><a href="#跨浏览器绑定事件" class="headerlink" title="跨浏览器绑定事件"></a>跨浏览器绑定事件</h2><pre><code>function addEventSamp(obj,evt,fn){ 
+    if(!oTarget){return;}
+    if (obj.addEventListener) { 
+        obj.addEventListener(evt, fn, false); 
+    }else if(obj.attachEvent){ 
+        obj.attachEvent(&apos;on&apos;+evt,fn); 
+    }else{
+        oTarget[&quot;on&quot; + sEvtType] = fn;
+    } 
+}
+</code></pre><h2 id="跨浏览器删除事件"><a href="#跨浏览器删除事件" class="headerlink" title="跨浏览器删除事件"></a>跨浏览器删除事件</h2><pre><code>function delEvt(obj,evt,fn){
+    if(!obj){return;}
+    if(obj.addEventListener){
+        obj.addEventListener(evt,fn,false);
+    }else if(oTarget.attachEvent){
+        obj.attachEvent(&quot;on&quot; + evt,fn);
+    }else{
+        obj[&quot;on&quot; + evt] = fn;
+    }
+}
+</code></pre><h2 id="检验URL链接是否有效"><a href="#检验URL链接是否有效" class="headerlink" title="检验URL链接是否有效"></a>检验URL链接是否有效</h2><pre><code>function getUrlState(URL){ 
+    var xmlhttp = new ActiveXObject(&quot;microsoft.xmlhttp&quot;); 
+    xmlhttp.Open(&quot;GET&quot;,URL, false);  
+    try{  
+            xmlhttp.Send(); 
+    }catch(e){
+    }finally{ 
+        var result = xmlhttp.responseText; 
+        if(result){
+            if(xmlhttp.Status==200){ 
+                return(true); 
+             }else{ 
+                   return(false); 
+             } 
+         }else{ 
+             return(false); 
+         } 
+    }
+}
+</code></pre><h2 id="格式化CSS样式代码"><a href="#格式化CSS样式代码" class="headerlink" title="格式化CSS样式代码"></a>格式化CSS样式代码</h2><pre><code>function formatCss(s){//格式化代码
+    s = s.replace(/\s*([\{\}\:\;\,])\s*/g, &quot;$1&quot;);
+    s = s.replace(/;\s*;/g, &quot;;&quot;); //清除连续分号
+    s = s.replace(/\,[\s\.\#\d]*{/g, &quot;{&quot;);
+    s = s.replace(/([^\s])\{([^\s])/g, &quot;$1 {\n\t$2&quot;);
+    s = s.replace(/([^\s])\}([^\n]*)/g, &quot;$1\n}\n$2&quot;);
+    s = s.replace(/([^\s]);([^\s\}])/g, &quot;$1;\n\t$2&quot;);
+    return s;
+}
+</code></pre><h2 id="压缩CSS样式代码"><a href="#压缩CSS样式代码" class="headerlink" title="压缩CSS样式代码"></a>压缩CSS样式代码</h2><pre><code>function compressCss (s) {//压缩代码
+    s = s.replace(/\/\*(.|\n)*?\*\//g, &quot;&quot;); //删除注释
+    s = s.replace(/\s*([\{\}\:\;\,])\s*/g, &quot;$1&quot;);
+    s = s.replace(/\,[\s\.\#\d]*\{/g, &quot;{&quot;); //容错处理
+    s = s.replace(/;\s*;/g, &quot;;&quot;); //清除连续分号
+    s = s.match(/^\s*(\S+(\s+\S+)*)\s*$/); //去掉首尾空白
+    return (s == null) ? &quot;&quot; : s[1];
+}
+</code></pre><h2 id="获取当前路径"><a href="#获取当前路径" class="headerlink" title="获取当前路径"></a>获取当前路径</h2><pre><code>var currentPageUrl = &quot;&quot;;
+if (typeof this.href === &quot;undefined&quot;) {
+    currentPageUrl = document.location.toString().toLowerCase();
+}else {
+    currentPageUrl = this.href.toString().toLowerCase();
+}
+</code></pre><h2 id="判断是否移动设备"><a href="#判断是否移动设备" class="headerlink" title="判断是否移动设备"></a>判断是否移动设备</h2><pre><code>function isMobile(){
+    if (typeof this._isMobile === &apos;boolean&apos;){
+        return this._isMobile;
+    }
+    var screenWidth = this.getScreenWidth();
+    var fixViewPortsExperiment = rendererModel.runningExperiments.FixViewport ||rendererModel.runningExperiments.fixviewport;
+    var fixViewPortsExperimentRunning = fixViewPortsExperiment &amp;&amp; (fixViewPortsExperiment.toLowerCase() === &quot;new&quot;);
+    if(!fixViewPortsExperiment){
+        if(!this.isAppleMobileDevice()){
+            screenWidth = screenWidth/window.devicePixelRatio;
+        }
+    }
+    var isMobileScreenSize = screenWidth &lt; 600;
+    var isMobileUserAgent = false;
+    this._isMobile = isMobileScreenSize &amp;&amp; this.isTouchScreen();
+    return this._isMobile;
+}
+</code></pre><h2 id="判断是否移动设备访问"><a href="#判断是否移动设备访问" class="headerlink" title="判断是否移动设备访问"></a>判断是否移动设备访问</h2><pre><code>function isMobileUserAgent(){
+    return (/iphone|ipod|android.*mobile|windows.*phone|blackberry.*mobile/i.test(window.navigator.userAgent.toLowerCase()));
+}
+</code></pre><h2 id="判断是否苹果移动设备访问"><a href="#判断是否苹果移动设备访问" class="headerlink" title="判断是否苹果移动设备访问"></a>判断是否苹果移动设备访问</h2><pre><code>function isAppleMobileDevice(){
+    return (/iphone|ipod|ipad|Macintosh/i.test(navigator.userAgent.toLowerCase()));
+}
+</code></pre><h2 id="判断是否安卓移动设备访问"><a href="#判断是否安卓移动设备访问" class="headerlink" title="判断是否安卓移动设备访问"></a>判断是否安卓移动设备访问</h2><pre><code>function isAndroidMobileDevice(){
+    return (/android/i.test(navigator.userAgent.toLowerCase()));
+}
+</code></pre><h2 id="判断是否Touch屏幕"><a href="#判断是否Touch屏幕" class="headerlink" title="判断是否Touch屏幕"></a>判断是否Touch屏幕</h2><pre><code>function isTouchScreen(){
+    return ((&apos;ontouchstart&apos; in window) || window.DocumentTouch &amp;&amp; document instanceof DocumentTouch);
+}
+</code></pre><h2 id="判断是否打开视窗"><a href="#判断是否打开视窗" class="headerlink" title="判断是否打开视窗"></a>判断是否打开视窗</h2><pre><code>function isViewportOpen() {
+    return !!document.getElementById(&apos;wixMobileViewport&apos;);
+}
+</code></pre><h2 id="获取移动设备初始化大小"><a href="#获取移动设备初始化大小" class="headerlink" title="获取移动设备初始化大小"></a>获取移动设备初始化大小</h2><pre><code>function getInitZoom(){
+    if(!this._initZoom){
+        var screenWidth = Math.min(screen.height, screen.width);
+        if(this.isAndroidMobileDevice() &amp;&amp; !this.isNewChromeOnAndroid()){
+            screenWidth = screenWidth/window.devicePixelRatio;
+        }
+            this._initZoom = screenWidth /document.body.offsetWidth;
+        }
+    return this._initZoom;
+}
+</code></pre><h2 id="获取移动设备最大化大小"><a href="#获取移动设备最大化大小" class="headerlink" title="获取移动设备最大化大小"></a>获取移动设备最大化大小</h2><pre><code>function getZoom(){
+    var screenWidth = (Math.abs(window.orientation) === 90) ? Math.max(screen.height, screen.width) : Math.min(screen.height, screen.width);
+    if(this.isAndroidMobileDevice() &amp;&amp; !this.isNewChromeOnAndroid()){
+        screenWidth = screenWidth/window.devicePixelRatio;
+    }
+    var FixViewPortsExperiment = rendererModel.runningExperiments.FixViewport || rendererModel.runningExperiments.fixviewport;
+    var FixViewPortsExperimentRunning = FixViewPortsExperiment &amp;&amp; (FixViewPortsExperiment === &quot;New&quot; || FixViewPortsExperiment === &quot;new&quot;);
+    if(FixViewPortsExperimentRunning){
+        return screenWidth / window.innerWidth;
+    }else{
+        return screenWidth / document.body.offsetWidth;
+    }
+}
+</code></pre><h2 id="获取移动设备屏幕宽度"><a href="#获取移动设备屏幕宽度" class="headerlink" title="获取移动设备屏幕宽度"></a>获取移动设备屏幕宽度</h2><pre><code>function getScreenWidth(){
+    var smallerSide = Math.min(screen.width, screen.height);
+    var fixViewPortsExperiment = rendererModel.runningExperiments.FixViewport || rendererModel.runningExperiments.fixviewport;
+    var fixViewPortsExperimentRunning = fixViewPortsExperiment &amp;&amp; (fixViewPortsExperiment.toLowerCase() === &quot;new&quot;);
+    if(fixViewPortsExperiment){
+        if(this.isAndroidMobileDevice() &amp;&amp; !this.isNewChromeOnAndroid()){
+            smallerSide = smallerSide/window.devicePixelRatio;
+        }
+    }
+    return smallerSide;
+}
+</code></pre><h2 id="完美判断是否为网址"><a href="#完美判断是否为网址" class="headerlink" title="完美判断是否为网址"></a>完美判断是否为网址</h2><pre><code>function IsURL(strUrl) {
+    var regular = /^\b(((https?|ftp):\/\/)?[-a-z0-9]+(\.[-a-z0-9]+)*\.(?:com|edu|gov|int|mil|net|org|biz|info|name|museum|asia|coop|aero|[a-z][a-z]|((25[0-5])|(2[0-4]\d)|(1\d\d)|([1-9]\d)|\d))\b(\/[-a-z0-9_:\@&amp;?=+,.!\/~%\$]*)?)$/i
+    if (regular.test(strUrl)) {
+        return true;
+    }else {
+        return false;
+    }
+}
+</code></pre><h2 id="常用的正则表达式"><a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h2><pre><code>//正整数
+/^[0-9]*[1-9][0-9]*$/;
+//负整数
+/^-[0-9]*[1-9][0-9]*$/;
+//正浮点数
+/^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$/;   
+//负浮点数
+/^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$/;  
+//浮点数
+/^(-?\d+)(\.\d+)?$/;
+//email地址
+/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
+//url地址
+/^[a-zA-z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\S*)?$/;
+或：^http:\/\/[A-Za-z0-9]+\.[A-Za-z0-9]+[\/=\?%\-&amp;_~`@[\]\&apos;:+!]*([^&lt;&gt;\&quot;\&quot;])*$ 
+  //年/月/日（年-月-日、年.月.日）
+/^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$/;
+//匹配中文字符
+/[\u4e00-\u9fa5]/;
+//匹配帐号是否合法(字母开头，允许5-10字节，允许字母数字下划线)
+/^[a-zA-Z][a-zA-Z0-9_]{4,9}$/;
+//匹配空白行的正则表达式
+/\n\s*\r/;
+//匹配中国邮政编码
+/[1-9]\d{5}(?!\d)/;
+//匹配身份证
+/\d{15}|\d{18}/;
+//匹配国内电话号码
+/(\d{3}-|\d{4}-)?(\d{8}|\d{7})?/;
+//匹配IP地址
+/((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)/;
+//匹配首尾空白字符的正则表达式
+/^\s*|\s*$/;
+//匹配HTML标记的正则表达式
+&lt; (\S*?)[^&gt;]*&gt;.*?|&lt; .*? /&gt;;
+//sql 语句
+^(select|drop|delete|create|update|insert).*$
+//提取信息中的网络链接
+(h|H)(r|R)(e|E)(f|F) *= *(&apos;|&quot;)?(\w|\\|\/|\.)+(&apos;|&quot;| *|&gt;)? 
+//提取信息中的邮件地址
+\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)* 
+//提取信息中的图片链接
+(s|S)(r|R)(c|C) *= *(&apos;|&quot;)?(\w|\\|\/|\.)+(&apos;|&quot;| *|&gt;)? 
+//提取信息中的 IP 地址
+(\d+)\.(\d+)\.(\d+)\.(\d+)
+//取信息中的中国手机号码
+(86)*0*13\d{9} 
+//提取信息中的中国邮政编码
+[1-9]{1}(\d+){5} 
+//提取信息中的浮点数（即小数）
+(-?\d*)\.?\d+ 
+//提取信息中的任何数字
+(-?\d*)(\.\d+)?
+//电话区号
+^0\d{2,3}$
+//腾讯 QQ 号
+^[1-9]*[1-9][0-9]*$ 
+//帐号（字母开头，允许 5-16 字节，允许字母数字下划线）
+^[a-zA-Z][a-zA-Z0-9_]{4,15}$ 
+//中文、英文、数字及下划线
+^[\u4e00-\u9fa5_a-zA-Z0-9]+$
+</code></pre><h2 id="返回顶部的通用方法"><a href="#返回顶部的通用方法" class="headerlink" title="返回顶部的通用方法"></a>返回顶部的通用方法</h2><pre><code>function backTop(btnId) {
+    var btn = document.getElementById(btnId);
+    var d = document.documentElement;
+    var b = document.body;
+    window.onscroll = set;
+    btn.style.display = &quot;none&quot;;
+    btn.onclick = function() {
+        btn.style.display = &quot;none&quot;;
+        window.onscroll = null;
+        this.timer = setInterval(function() {
+            d.scrollTop -= Math.ceil((d.scrollTop + b.scrollTop) * 0.1);
+            b.scrollTop -= Math.ceil((d.scrollTop + b.scrollTop) * 0.1);
+            if ((d.scrollTop + b.scrollTop) == 0) clearInterval(btn.timer, window.onscroll = set);
+            }, 10);
+    };
+    function set() {
+        btn.style.display = (d.scrollTop + b.scrollTop &gt; 100) ? &apos;block&apos;: &quot;none&quot;
+    }
+};
+backTop(&apos;goTop&apos;);
+</code></pre><h2 id="打开一个窗体通用方法"><a href="#打开一个窗体通用方法" class="headerlink" title="打开一个窗体通用方法"></a>打开一个窗体通用方法</h2><pre><code>function openWindow(url,windowName,width,height){
+    var x = parseInt(screen.width / 2.0) - (width / 2.0); 
+    var y = parseInt(screen.height / 2.0) - (height / 2.0);
+    var isMSIE= (navigator.appName == &quot;Microsoft Internet Explorer&quot;);
+    if (isMSIE) {
+        var p = &quot;resizable=1,location=no,scrollbars=no,width=&quot;;
+        p = p+width;
+           p = p+&quot;,height=&quot;;
+           p = p+height;
+        p = p+&quot;,left=&quot;;
+        p = p+x;
+        p = p+&quot;,top=&quot;;
+        p = p+y;
+        retval = window.open(url, windowName, p);
+    } else {
+        var win = window.open(url, &quot;ZyiisPopup&quot;, &quot;top=&quot; + y + &quot;,left=&quot; + x + &quot;,scrollbars=&quot; + scrollbars + &quot;,dialog=yes,modal=yes,width=&quot; + width + &quot;,height=&quot; + height + &quot;,resizable=no&quot; );
+        eval(&quot;try { win.resizeTo(width, height); } catch(e) { }&quot;);
+        win.focus();
+    }
+}
+</code></pre><h2 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h2><pre><code>function setFixed(obj,left,top){
+    var timer,lefts,tops;
+    clearInterval(timer);
+    //可以实现浏览器是否为ie6的判断
+    if(window.ActiveXObject&amp;&amp;!window.XMLHttpRequest){
+        obj.style.position=&quot;absolute&quot;;
+        timer=setInterval(function () {
+            lefts=document.documentElement.scrollLeft;
+            tops=document.documentElement.scrollTop;
+            obj.style.left=left+lefts+&quot;px&quot;;
+            obj.style.top=top+tops+&quot;px&quot;;
+        },50);
+    }else{
+        obj.style.position=&quot;fixed&quot;;
+        obj.style.left=left+&quot;px&quot;;
+        obj.style.top=top+&quot;px&quot;;
+    }
+} 
+</code></pre><h2 id="拖拽函数"><a href="#拖拽函数" class="headerlink" title="拖拽函数"></a>拖拽函数</h2><pre><code> function drag(obj,options){
+    new drags(obj,options);
+}
+
+function drags(obj,options){
+    var options=options||{};
+    this.obj=obj;
+    this.obj.that=this;
+    document.that=this;
+    this.dragX=options.dragX==undefined?true:options.dragX;
+    this.dragY=options.dragY==undefined?true:options.dragY;
+    this.sideX=options.sideX==undefined?false:options.sideX;
+    this.sideY=options.sideY==undefined?false:options.sideY;
+    this.animate=options.animate==undefined?true:options.animate;
+    this.speed=0.8;
+    this.play();
+}
+
+drags.prototype={
+    play:function(){
+        addEvent(this.obj,&quot;mousedown&quot;,this.downFun)
+    },
+    downFun:function(e){
+        var that=this.that;
+        var e=that.getEvent(e);
+        that.ox=that.getOx(e);
+        that.oy=that.getOy(e);
+        that.startX=that.ox;
+        that.startY=that.oy;
+        addEvent(document,&quot;mousemove&quot;,that.moveFun);
+        addEvent(document,&quot;mouseup&quot;,that.upFun);
+        stopValue (e); 
+    },
+    moveFun: function(e){
+        var that=this.that;
+        var e=that.getEvent(e);
+        var cx=e.clientX;
+        var cy=e.clientY;
+        that.moveX=cx;
+        that.moveY=cy;
+        var lefts=cx-(offset(that.obj).left-that.obj.offsetLeft)-that.ox;
+        var tops=cy-(offset(that.obj).top-that.obj.offsetTop)-that.oy;
+
+
+        //控制移动可达的边界
+        if(that.sideX){
+            if(lefts&lt;that.sideX[0]){
+                lefts=that.sideX[0];
+            }
+            if(lefts&gt;that.sideX[1]){
+                lefts=that.sideX[1]
+            }
+        }
+        if(that.sideY){
+            if(tops&lt;that.sideY[0]){
+                tops=that.sideY[0];
+            }
+            if(tops&gt;that.sideY[1]){
+                tops=that.sideY[1]
+            }
+        }
+        //控制移动方向
+        if(that.dragX==true){
+            that.obj.style.left=lefts+&quot;px&quot;;
+        }
+        if(that.dragY==true){
+            that.obj.style.top=tops+&quot;px&quot;;
+        }
+
+        //控制拖动完成时有无动画
+        that.endX=that.moveX-that.startX;
+        that.endY=that.moveY-that.startY;
+        that.startX=that.moveX;
+        that.startY=that.moveY;
+        stopValue (e); 
+
+    },
+    upFun:function(e){
+        var that=this.that;
+        if(that.animate){
+            that.move();
+        }
+        removeEvent(document,&quot;mousemove&quot;,that.moveFun);
+        removeEvent(document,&quot;mouseup&quot;,that.upFun);
+    },
+
+    getEvent:function(e){
+        return e||window.event;
+    },
+    getOx:function(e){
+        return  e.offsetX|| e.layerX||0;
+    },
+    getOy:function(e){
+        return e.offsetY|| e.layerY||0;
+    },
+    //控制拖动完成时有无动画
+    move:function(){
+        var that=this;
+        var flag=true;
+        if(Math.abs(that.endX)&gt;Math.abs(that.endY)){
+            flag=true;
+        }else{
+            flag=false;
+        }
+        var t=setInterval(function(){
+            if(flag){
+                if(Math.abs(that.endX)&lt;1){
+                    clearInterval(t);
+                }
+            }else{
+                if(Math.abs(that.endY)&lt;1){
+                    clearInterval(t);
+                }
+            }
+            that.endX*=that.speed;
+            that.endY*=that.speed;
+            var x=that.obj.offsetLeft+that.endX;
+            var y=that.obj.offsetTop+that.endY;
+            if(that.sideX){
+                if(x&lt;that.sideX[0]){
+                    x=that.sideX[0];
+                }
+                if(x&gt;that.sideX[1]){
+                    x=that.sideX[1];
+                }
+            }
+            if(that.sideY){
+                if(y&lt;that.sideY[0]){
+                    y=that.sideY[0];
+                }
+                if(y&gt;that.sideY[1]){
+                    y=that.sideY[1];
+                }
+            }
+            that.obj.style.left=x+&quot;px&quot;;
+            that.obj.style.top=y+&quot;px&quot;;
+        },50)
+    }
+}
+</code></pre><p>##解决的主要问题就是用console调试的时候IE报错</p>
+<pre><code>(function() {
+    var method;
+    var noop = function () {};
+    var methods = [
+        &apos;assert&apos;, &apos;clear&apos;, &apos;count&apos;, &apos;debug&apos;, &apos;dir&apos;, &apos;dirxml&apos;, &apos;error&apos;,
+        &apos;exception&apos;, &apos;group&apos;, &apos;groupCollapsed&apos;, &apos;groupEnd&apos;, &apos;info&apos;, &apos;log&apos;,
+         &apos;markTimeline&apos;, &apos;profile&apos;, &apos;profileEnd&apos;, &apos;table&apos;, &apos;time&apos;, &apos;timeEnd&apos;,
+        &apos;timeStamp&apos;, &apos;trace&apos;, &apos;warn&apos;
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}());
+</code></pre><h2 id="鼠标上下滚轮事件"><a href="#鼠标上下滚轮事件" class="headerlink" title="鼠标上下滚轮事件"></a>鼠标上下滚轮事件</h2><pre><code>function mousewheel(obj,upFun,downFun){
+    if(obj.attachEvent){
+    obj.attachEvent(&quot;onmousewheel&quot;,scrollFn);  //IE、 opera
+    }else if(obj.addEventListener){
+    obj.addEventListener(&quot;mousewheel&quot;,scrollFn,false);  
+    //chrome,safari    -webkit-
+    obj.addEventListener(&quot;DOMMouseScroll&quot;,scrollFn,false);  
+    //firefox     -moz-
+    }
+    function scrollFn(e){
+        var ev=e||window.event;
+        var num=ev.wheelDelta||ev.detail;
+        /*判断操作系统的类型*/
+        if(navigator.platform==&quot;MacIntel&quot;){
+                if(num==-120||num==3){
+             if(upFun){
+                 upFun.call(obj);
+             }
+         }else if(num==120||num==-3){
+             if(downFun){
+                 downFun.call(obj);
+                 }
+
+             }    
+        }else{
+                if(num==120||num==-3){
+             if(upFun){
+                 upFun.call(obj);
+             }
+         }else if(num==-120||num==3){
+             if(downFun){
+                 downFun.call(obj);
+                 }
+
+             }    
+        }                 
+        stopValue (ev); 
+        }    
+}
+</code></pre>
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Functionss/" rel="tag">#Functionss</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/14/javascript-study08/" rel="next" title="javascript-study08">
+                <i class="fa fa-chevron-left"></i> javascript-study08
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/24/移动前端知识点一/" rel="prev" title="移动前端知识点.md">
+                移动前端知识点.md <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/04/19/JsCommenFunctions/"
+     data-title="JsCommenFunctions"
+     data-content=""
+     data-url="http://wujieBlog.github.io/2016/04/19/JsCommenFunctions/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/19/JsCommenFunctions/"
+           data-title="JsCommenFunctions" data-url="http://wujieBlog.github.io/2016/04/19/JsCommenFunctions/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="cui wujie" />
+          <p class="site-author-name" itemprop="name">cui wujie</p>
+          <p class="site-description motion-element" itemprop="description">花逞春光，一番雨，一番风，终归尘土;竹坚雅操，几朝霜几朝雪，傲就琅矸</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/cwjie0229/" target="_blank">
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/cwjiewb/" target="_blank">
+                  
+                  WeiBo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/cwujie" target="_blank">
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/cui-wu-jie-7" target="_blank">
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://cwjie0229.github.io" target="_blank">
+                  
+                  Resume
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript常用函数"><span class="nav-number">1.</span> <span class="nav-text">javascript常用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串长度截取"><span class="nav-number">1.1.</span> <span class="nav-text">字符串长度截取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去除空格"><span class="nav-number">1.2.</span> <span class="nav-text">去除空格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置cookies"><span class="nav-number">1.3.</span> <span class="nav-text">设置cookies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取cookies值"><span class="nav-number">1.4.</span> <span class="nav-text">获取cookies值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加入收藏夹"><span class="nav-number">1.5.</span> <span class="nav-text">加入收藏夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置为首页"><span class="nav-number">1.6.</span> <span class="nav-text">设置为首页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加载样式文件"><span class="nav-number">1.7.</span> <span class="nav-text">加载样式文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#返回脚本内容"><span class="nav-number">1.8.</span> <span class="nav-text">返回脚本内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#清除脚本内容"><span class="nav-number">1.9.</span> <span class="nav-text">清除脚本内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态加载脚本文件"><span class="nav-number">1.10.</span> <span class="nav-text">动态加载脚本文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨浏览器绑定事件"><span class="nav-number">1.11.</span> <span class="nav-text">跨浏览器绑定事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨浏览器删除事件"><span class="nav-number">1.12.</span> <span class="nav-text">跨浏览器删除事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检验URL链接是否有效"><span class="nav-number">1.13.</span> <span class="nav-text">检验URL链接是否有效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式化CSS样式代码"><span class="nav-number">1.14.</span> <span class="nav-text">格式化CSS样式代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩CSS样式代码"><span class="nav-number">1.15.</span> <span class="nav-text">压缩CSS样式代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取当前路径"><span class="nav-number">1.16.</span> <span class="nav-text">获取当前路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是否移动设备"><span class="nav-number">1.17.</span> <span class="nav-text">判断是否移动设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是否移动设备访问"><span class="nav-number">1.18.</span> <span class="nav-text">判断是否移动设备访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是否苹果移动设备访问"><span class="nav-number">1.19.</span> <span class="nav-text">判断是否苹果移动设备访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是否安卓移动设备访问"><span class="nav-number">1.20.</span> <span class="nav-text">判断是否安卓移动设备访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是否Touch屏幕"><span class="nav-number">1.21.</span> <span class="nav-text">判断是否Touch屏幕</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断是否打开视窗"><span class="nav-number">1.22.</span> <span class="nav-text">判断是否打开视窗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取移动设备初始化大小"><span class="nav-number">1.23.</span> <span class="nav-text">获取移动设备初始化大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取移动设备最大化大小"><span class="nav-number">1.24.</span> <span class="nav-text">获取移动设备最大化大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取移动设备屏幕宽度"><span class="nav-number">1.25.</span> <span class="nav-text">获取移动设备屏幕宽度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完美判断是否为网址"><span class="nav-number">1.26.</span> <span class="nav-text">完美判断是否为网址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的正则表达式"><span class="nav-number">1.27.</span> <span class="nav-text">常用的正则表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#返回顶部的通用方法"><span class="nav-number">1.28.</span> <span class="nav-text">返回顶部的通用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打开一个窗体通用方法"><span class="nav-number">1.29.</span> <span class="nav-text">打开一个窗体通用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绝对定位"><span class="nav-number">1.30.</span> <span class="nav-text">绝对定位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拖拽函数"><span class="nav-number">1.31.</span> <span class="nav-text">拖拽函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鼠标上下滚轮事件"><span class="nav-number">1.32.</span> <span class="nav-text">鼠标上下滚轮事件</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cui wujie</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"iissnan-notes"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

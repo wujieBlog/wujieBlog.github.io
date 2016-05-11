@@ -1,0 +1,1035 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="js对象," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="JavaScript 对象JavaScript 中的所有事物都是对象：字符串、数值、数组、函数…此外，JavaScript 允许自定义对象。__对象只是一种特殊的数据。对象拥有属性和方法。
+
+所有事物都可以是对象：布尔型、数字型、字符串、日期、数字和正则表达式、数组、甚至函数都可以是一个对象。
+对象只是一种特殊的数据。对象拥有属性和方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript-study07">
+<meta property="og:url" content="http://wujieBlog.github.io/2016/04/13/javascript-study07/index.html">
+<meta property="og:site_name" content="MrCui's Blog">
+<meta property="og:description" content="JavaScript 对象JavaScript 中的所有事物都是对象：字符串、数值、数组、函数…此外，JavaScript 允许自定义对象。__对象只是一种特殊的数据。对象拥有属性和方法。
+
+所有事物都可以是对象：布尔型、数字型、字符串、日期、数字和正则表达式、数组、甚至函数都可以是一个对象。
+对象只是一种特殊的数据。对象拥有属性和方法">
+<meta property="og:updated_time" content="2016-04-13T11:04:53.840Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript-study07">
+<meta name="twitter:description" content="JavaScript 对象JavaScript 中的所有事物都是对象：字符串、数值、数组、函数…此外，JavaScript 允许自定义对象。__对象只是一种特殊的数据。对象拥有属性和方法。
+
+所有事物都可以是对象：布尔型、数字型、字符串、日期、数字和正则表达式、数组、甚至函数都可以是一个对象。
+对象只是一种特殊的数据。对象拥有属性和方法">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> javascript-study07 | MrCui's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MrCui's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">前端工程狮</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/../http:/cwjie0229.github.io/" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                javascript-study07
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-13T19:04:22+08:00" content="2016-04-13">
+              2016-04-13
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/13/javascript-study07/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/13/javascript-study07/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="JavaScript-对象"><a href="#JavaScript-对象" class="headerlink" title="JavaScript 对象"></a>JavaScript 对象</h1><p>JavaScript 中的所有事物都是对象：字符串、数值、数组、函数…此外，JavaScript 允许自定义对象。__对象只是一种特殊的数据。对象拥有属性和方法。</p>
+<ul>
+<li>所有事物都可以是对象：布尔型、数字型、字符串、日期、数字和正则表达式、数组、甚至函数都可以是一个对象。</li>
+<li>对象只是一种特殊的数据。对象拥有属性和方法</li>
+</ul>
+<a id="more"></a>
+<h2 id="访问对象的属性"><a href="#访问对象的属性" class="headerlink" title="访问对象的属性"></a>访问对象的属性</h2><ul>
+<li>属性是与对象相关的值，</li>
+<li><p>访问对象的属性的语法是：</p>
+<pre><code>ObjectName.propertyName
+</code></pre></li>
+</ul>
+<h2 id="访问对象的方法"><a href="#访问对象的方法" class="headerlink" title="访问对象的方法"></a>访问对象的方法</h2><ul>
+<li>方法是能够在对象上执行的动作</li>
+<li><p>可以通过以下语法来调用方法</p>
+<pre><code>ObjectName.methodName()
+</code></pre></li>
+</ul>
+<h2 id="创建Javascript对象"><a href="#创建Javascript对象" class="headerlink" title="创建Javascript对象"></a>创建Javascript对象</h2><p>通过Javascript 可以定义并创建自己的对象</p>
+<ul>
+<li>创建新的对象有两种不同的方法<ul>
+<li>定义丁创建对象的实例</li>
+<li>使用函数来定义对象，然后创建新的对象的实例</li>
+</ul>
+</li>
+</ul>
+<h2 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h2><pre><code>创建直接的对象的实例
+
+person = new Object();
+person.firstname = &quot;John&quot;;
+person.lastname = &quot;Doe&quot;;
+person.age = 40;
+person.eyecolor = &quot;blue&quot;;
+
+
+替代语法（使用对象 literals）：
+
+person={firstname:&quot;John&quot;,lastname:&quot;Doe&quot;,age:50,eyecolor:&quot;blue&quot;};
+</code></pre><h2 id="使用对象构造器"><a href="#使用对象构造器" class="headerlink" title="使用对象构造器"></a>使用对象构造器</h2><pre><code>使用函数来创建对象
+function person(firstname,lastname,age,eyecolor)
+{
+    this.firstname=firstname;
+    this.lastname=lastname;
+    this.age=age;
+    this.eyecolor=eyecolor;
+}
+</code></pre><p>解释：在JavaScript中，<strong>this</strong>通常指向的是我们正在执行的函数本身，或者是指向该函数所属的对象（运行时）</p>
+<h2 id="创建Javascript对象实例"><a href="#创建Javascript对象实例" class="headerlink" title="创建Javascript对象实例"></a>创建Javascript对象实例</h2><p>一旦有了对象构造器，就可以创建新的对象实例，就像这样：</p>
+<pre><code>var myFather=new person(&quot;John&quot;,&quot;Doe&quot;,50,&quot;blue&quot;);
+var myMother=new person(&quot;Sally&quot;,&quot;Rally&quot;,48,&quot;green&quot;);
+</code></pre><h2 id="添加属性到-JavaScript-对象"><a href="#添加属性到-JavaScript-对象" class="headerlink" title="添加属性到 JavaScript 对象"></a>添加属性到 JavaScript 对象</h2><p>通过为对象赋值，向已有对象添加新属性</p>
+<ul>
+<li><p>假设 personObj 已存在 - 您可以为其添加这些新属性：firstname、lastname、age 以及 eyecolor：    </p>
+<pre><code>person.firstname=&quot;John&quot;;
+person.lastname=&quot;Doe&quot;;
+person.age=30;
+person.eyecolor=&quot;blue&quot;;
+
+x=person.firstname;
+</code></pre></li>
+<li><p>T在以上代码执行后，x 的值将是：</p>
+<pre><code>John
+</code></pre></li>
+</ul>
+<h2 id="添加方法到Javascript对象"><a href="#添加方法到Javascript对象" class="headerlink" title="添加方法到Javascript对象"></a>添加方法到Javascript对象</h2><ul>
+<li>方法只不过是附加在对象上的函数。</li>
+<li><p>在构造器函数内部定义对象的方法：    </p>
+<pre><code>function person(firstname,lastname,age,eyecolor)
+{
+    this.firstname=firstname;
+    this.lastname=lastname;
+    this.age=age;
+    this.eyecolor=eyecolor;
+
+    this.changeName=changeName;
+    function changeName(name)
+    {
+    this.lastname=name;
+    }
+}
+</code></pre></li>
+</ul>
+<h2 id="Javascript-类"><a href="#Javascript-类" class="headerlink" title="Javascript 类"></a>Javascript 类</h2><p>Javascript是面向对象的语言，但是Javascript不使用类<br><br>在Javascript中，不会创建类，也不会通过类来创建对象<br><br>Javascript是基于prototype的，而不是基于类（这一点要弄明白）</p>
+<h2 id="Javascript-for-…-in-循环"><a href="#Javascript-for-…-in-循环" class="headerlink" title="Javascript for … in  循环"></a>Javascript for … in  循环</h2><p>Javascript for…in 语句循环遍历对象的属性</p>
+<p>语法：</p>
+<pre><code>for(variable in object)
+{
+    code to be executed;
+}
+</code></pre><p>注意： for…in 循环中的代码块将针对每个属性执行一次。</p>
+<p>循环遍历对象的属性：</p>
+<pre><code>var person={fname:&quot;John&quot;,lname:&quot;Doe&quot;,age:25}; 
+
+for (x in person)
+  {
+  txt=txt + person[x];
+  }
+</code></pre><h1 id="Javascript-Number-对象"><a href="#Javascript-Number-对象" class="headerlink" title="Javascript Number 对象"></a>Javascript Number 对象</h1><p>javascript只有以后总数字类型<br><br>可以使用也可以不使用小数点来写数字</p>
+<h2 id="javascript-数字"><a href="#javascript-数字" class="headerlink" title="javascript 数字"></a>javascript 数字</h2><p>可以使用也可以不使用小数点来写数字</p>
+<pre><code>var pi=3.14;    // 使用小数点
+var x=34;       // 不使用小数点
+</code></pre><p>极大或极小的数字可通过科学（指数）计数法来写：</p>
+<pre><code>var y=123e5;    // 12300000
+var z=123e-5;   // 0.00123
+</code></pre><h2 id="所有Javascript的数字均为64位"><a href="#所有Javascript的数字均为64位" class="headerlink" title="所有Javascript的数字均为64位"></a>所有Javascript的数字均为64位</h2><ul>
+<li>JavaScript 不是类型语言。与许多其他编程语言不同，JavaScript 不定义不同类型的数字，比如整数、短、长、浮点等等。<br>在JavaScript中，数字不分为整数类型和浮点型类型，所有的数字都是由 浮点型类型。JavaScript采用IEEE754标准定义的64位浮点格式表示数字，它能表示最大值为±1.7976931348623157 x 10308，最小值为±5 x 10 -324</li>
+</ul>
+<h2 id="精度"><a href="#精度" class="headerlink" title="精度"></a>精度</h2><p>整数最多15位（不使用小数点户指数计数法）<br><br>小数最大17位，但是浮点运算并不总是100%准确的</p>
+<pre><code>var x = 0.2+0.1; // result will be 0.30000000000000004
+</code></pre><h2 id="八进制和十六进制"><a href="#八进制和十六进制" class="headerlink" title="八进制和十六进制"></a>八进制和十六进制</h2><p>如果前缀为 0，则 JavaScript 会把数值常量解释为八进制数，如果前缀为 0 和 “x”，则解释为十六进制数。</p>
+<pre><code>var y = 0377;  //八进制
+var z = 0xFF;  //十六进制
+</code></pre><p>默认情况下，JavaScript 数字为十进制显示。<br>但是你可以使用 toString() 方法 输出16进制、8进制、2进制。</p>
+<pre><code>var myNumber=128;
+myNumber.toString(16);   // returns 80
+myNumber.toString(8);    // returns 200
+myNumber.toString(2);    // returns 10000000
+</code></pre><h2 id="无穷大（Infinity）"><a href="#无穷大（Infinity）" class="headerlink" title="无穷大（Infinity）"></a>无穷大（Infinity）</h2><p>当数字运算结果超过了JavaScript所能表示的数字上限（溢出），结果为一个特殊的无穷大（infinity）值，在JavaScript中以Infinity表示。同样地，当负数的值超过了JavaScript所能表示的负数范围，结果为负无穷大，在JavaScript中以-Infinity表示。无穷大值的行为特性和我们所期望的是一致的：基于它们的加、减、乘和除运算结果还是无穷大（当然还保留它们的正负号）。</p>
+<pre><code>myNumber=2;
+while (myNumber!=Infinity)
+{
+myNumber=myNumber*myNumber; // Calculate until Infinity
+}
+</code></pre><p>除以0是无穷大，无穷大是一个数字:</p>
+<h2 id="NaN-非数字值-特别注意"><a href="#NaN-非数字值-特别注意" class="headerlink" title="NaN - 非数字值(特别注意)"></a>NaN - 非数字值(特别注意)</h2><p>NaN 属性是代表非数字值的特殊值。该属性用于指示某个值不是数字。可以把 Number 对象设置为该值，来指示其不是数字值。</p>
+<pre><code>var x = 1000 / &quot;Apple&quot;;
+isNaN(x); // returns true
+var y = 100 / &quot;1000&quot;;
+isNaN(y); // returns false
+</code></pre><h2 id="数字可以是数字或者对象"><a href="#数字可以是数字或者对象" class="headerlink" title="数字可以是数字或者对象"></a>数字可以是数字或者对象</h2><p>数字可以私有数据进行初始化，就像 x = 123;<br>JavaScript 数字对象初始化数据， var y = new Number(123);</p>
+<pre><code>var x = 123;
+var y = new Number(123);
+typeof(x) // returns Number
+typeof(y) // returns Object
+</code></pre><h2 id="数字属性"><a href="#数字属性" class="headerlink" title="数字属性"></a>数字属性</h2><ul>
+<li>MAX_VALUE</li>
+<li>MIN_VALUE</li>
+<li>NEGATIVE_INFINITY  表示小于 Number.MIN_VALUE 的值</li>
+<li>POSITIVE_INFINITY  表示大于 Number.MAX_VALUE 的值</li>
+<li>NaN</li>
+<li>prototype             有能力向对象添加属性和方法。</li>
+<li>constructor        用于返回创建该对象的函数，也就是我们常说的构造函数</li>
+</ul>
+<h2 id="数字方法"><a href="#数字方法" class="headerlink" title="数字方法"></a>数字方法</h2><ul>
+<li>toExponential()   可把对象的值转换成指数计数法</li>
+<li>toFixed()         可把 Number 四舍五入为指定小数位数的数字</li>
+<li>toPrecision()        可在对象的值超出指定位数时将其转换为指数计数法</li>
+<li>toString()        把数字转换为字符串，使用指定的基数。</li>
+<li>valueOf()            返回一个 Number 对象的基本数字值。</li>
+<li>toLocaleString()    把数字转换为字符串，使用本地数字格式顺序    </li>
+</ul>
+<h1 id="JavaScript-字符串（String）-对象"><a href="#JavaScript-字符串（String）-对象" class="headerlink" title="JavaScript 字符串（String） 对象"></a>JavaScript 字符串（String） 对象</h1><p>String 对象用于处理已有的字符块</p>
+<h2 id="JavaScript-字符串"><a href="#JavaScript-字符串" class="headerlink" title="JavaScript 字符串"></a>JavaScript 字符串</h2><p>字符串（String）使用长度属性length来计算字符串的长度：</p>
+<pre><code>var txt=&quot;Hello World!&quot;;
+document.write(txt.length);
+
+var txt=&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;
+document.write(txt.length);
+</code></pre><h2 id="在字符串中查找字符串"><a href="#在字符串中查找字符串" class="headerlink" title="在字符串中查找字符串"></a>在字符串中查找字符串</h2><p>字符串使用 indexOf() 来定位字符串中某一个指定的字符首次出现的位置：</p>
+<pre><code>var str=&quot;Hello world, welcome to the universe.&quot;;
+var n=str.indexOf(&quot;welcome&quot;);
+</code></pre><p>如果没找到对应的字符函数返回-1</p>
+<pre><code>lastIndexOf() 方法在字符串末尾开始查找字符串出现的位置。
+</code></pre><h2 id="内容匹配"><a href="#内容匹配" class="headerlink" title="内容匹配"></a>内容匹配</h2><p>match()函数用来查找字符串中特定的字符，并且如果找到的话，则返回这个字符。</p>
+<pre><code>var str=&quot;Hello world!&quot;;
+document.write(str.match(&quot;world&quot;) + &quot;&lt;br&gt;&quot;);
+document.write(str.match(&quot;World&quot;) + &quot;&lt;br&gt;&quot;);
+document.write(str.match(&quot;world!&quot;));
+</code></pre><h2 id="替换内容"><a href="#替换内容" class="headerlink" title="替换内容"></a>替换内容</h2><p>replace() 方法在字符串中用某些字符替换另一些字符。</p>
+<pre><code>str=&quot;Please visit Microsoft!&quot;
+var n=str.replace(&quot;Microsoft&quot;,&quot;w3cschool&quot;);
+</code></pre><h2 id="字符串大小写转换"><a href="#字符串大小写转换" class="headerlink" title="字符串大小写转换"></a>字符串大小写转换</h2><p>字符串大小写转换使用函数 toUpperCase() / toLowerCase():</p>
+<pre><code>var txt=&quot;Hello World!&quot;;       // String
+var txt1=txt.toUpperCase();   // txt1 is txt converted to upper
+var txt2=txt.toLowerCase();   // txt2 is txt converted to lower
+</code></pre><h2 id="字符串转为数组"><a href="#字符串转为数组" class="headerlink" title="字符串转为数组"></a>字符串转为数组</h2><p>字符串使用strong&gt;split()函数转为数组:</p>
+<pre><code>txt=&quot;a,b,c,d,e&quot;   // String
+txt.split(&quot;,&quot;);   // Split on commas
+txt.split(&quot; &quot;);   // Split on spaces
+txt.split(&quot;|&quot;);   // Split on pipe 
+</code></pre><h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><p>Javascript 中可以使用反斜线（\）插入特殊符号，如：撇号,引号等其他特殊符号。</p>
+<h2 id="字符串属性"><a href="#字符串属性" class="headerlink" title="字符串属性"></a>字符串属性</h2><pre><code>- length                字符串的长度
+- prototype            允许您向对象添加属性和方法
+- constructor        对创建该对象的函数的引用
+</code></pre><h2 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h2><pre><code>- anchor()            创建 HTML 锚。
+- big()                用大号字体显示字符串
+- blink()            显示闪动字符串
+- bold()             使用粗体显示
+- charAt()            返回指定位置的字符
+- charCodeAt()        返回指定位置的字符的Unicode的编码
+- concat()            连接字符串
+- fixed()            以打字机文本显示
+- fontcolor()        使用指定颜色来显示
+- fontsize()        使用指定大小来显示
+- formCharCode()    从字符编码创建一个字符串
+- indexOf()            检索字符串
+- italics()            使用斜体显示字符串
+- lastIndexOf()            从后向前搜索字符串。
+- link()            将字符串显示为链接。
+- localeCompare()            用本地特定的顺序来比较两个字符串。
+- match()            找到一个或多个正则表达式的匹配。
+- replace()            替换与正则表达式匹配的子串。
+- search()            检索与正则表达式相匹配的值。
+- slice()        提取字符串的片断，并在新的字符串中返回被提取的部分。
+- small()        使用小字号来显示字符串。
+- split()        把字符串分割为字符串数组。
+- sub()            把字符串显示为下标。
+- substr()        从起始索引号提取字符串中指定数目的字符。
+- substring()    提取字符串中两个指定的索引号之间的字符。
+- sup()            把字符串显示为上标。
+- toLocaleLowerCase()    把字符串转换为小写。
+- toLocaleUpperCase()    把字符串转换为大写。
+- toLowerCase()        把字符串转换为小写
+- toUpperCase()        把字符串转换为大写。
+- toSource()        代表对象的源代码。
+- toString()        返回字符串。
+- valueOf()                返回某个字符串对象的原始值。
+</code></pre><h1 id="JavaScript-Date（日期）-对象"><a href="#JavaScript-Date（日期）-对象" class="headerlink" title="JavaScript Date（日期） 对象"></a>JavaScript Date（日期） 对象</h1><h2 id="创建日期"><a href="#创建日期" class="headerlink" title="创建日期"></a>创建日期</h2><ul>
+<li>Date 对象用于处理日期和时间。<br>可以通过 new 关键词来定义 Date 对象。以下代码定义了名为 myDate 的 Date 对象：</li>
+</ul>
+<p>有四种方式初始化日期:</p>
+<pre><code>new Date() // 当前日期和时间
+new Date(milliseconds) //返回从 1970 年 1 月 1 日至今的毫秒数
+new Date(dateString)
+new Date(year, month, day, hours, minutes, seconds, milliseconds)
+</code></pre><p>实例化一个日期的一些例子：</p>
+<pre><code>var today = new Date()
+var d1 = new Date(&quot;October 13, 1975 11:13:00&quot;)
+var d2 = new Date(79,5,24)
+var d3 = new Date(79,5,24,11,33,0)
+</code></pre><h2 id="设置日期："><a href="#设置日期：" class="headerlink" title="设置日期："></a>设置日期：</h2><p>通过使用针对日期对象的方法，我们可以很容易地对日期进行操作。</p>
+<ul>
+<li><p>在下面的例子中，我们为日期对象设置了一个特定的日期 (2010 年 1 月 14 日)：</p>
+<pre><code>var myDate=new Date();
+myDate.setFullYear(2010,0,14);
+</code></pre></li>
+<li><p>在下面的例子中，我们将日期对象设置为 5 天后的日期：</p>
+<pre><code>var myDate=new Date();
+myDate.setDate(myDate.getDate()+5);
+</code></pre></li>
+</ul>
+<h2 id="两个日期比较"><a href="#两个日期比较" class="headerlink" title="两个日期比较"></a>两个日期比较</h2><pre><code>var x=new Date();
+x.setFullYear(2100,0,14);
+var today = new Date();
+
+if (x&gt;today)
+  {
+  alert(&quot;Today is before 14th January 2100&quot;);
+  }
+else
+  {
+  alert(&quot;Today is after 14th January 2100&quot;);
+  }
+</code></pre><h2 id="Date-对象方法"><a href="#Date-对象方法" class="headerlink" title="Date 对象方法"></a>Date 对象方法</h2><p>方法    描述</p>
+<pre><code>- getDate()    从 Date 对象返回一个月中的某一天 (1 ~ 31)。
+- getDay()    从 Date 对象返回一周中的某一天 (0 ~ 6)。
+- getFullYear()    从 Date 对象以四位数字返回年份。
+- getHours()    返回 Date 对象的小时 (0 ~ 23)。
+- getMilliseconds()    返回 Date 对象的毫秒(0 ~ 999)。
+- getMinutes()    返回 Date 对象的分钟 (0 ~ 59)。
+- getMonth()    从 Date 对象返回月份 (0 ~ 11)。
+- getSeconds()    返回 Date 对象的秒数 (0 ~ 59)。
+- getTime()    返回 1970 年 1 月 1 日至今的毫秒数。
+- getTimezoneOffset()    返回本地时间与格林威治标准时间 (GMT) 的分钟差。
+- getUTCDate()    根据世界时从 Date 对象返回月中的一天 (1 ~ 31)。
+- getUTCDay()    根据世界时从 Date 对象返回周中的一天 (0 ~ 6)。
+- getUTCFullYear()    根据世界时从 Date 对象返回四位数的年份。
+- getUTCHours()    根据世界时返回 Date 对象的小时 (0 ~ 23)。
+- getUTCMilliseconds()    根据世界时返回 Date 对象的毫秒(0 ~ 999)。
+- getUTCMinutes()    根据世界时返回 Date 对象的分钟 (0 ~ 59)。
+- getUTCMonth()    根据世界时从 Date 对象返回月份 (0 ~ 11)。
+- getUTCSeconds()    根据世界时返回 Date 对象的秒钟 (0 ~ 59)。
+- getYear()    已废弃。 请使用 getFullYear() 方法代替。
+- parse()    返回1970年1月1日午夜到指定日期（字符串）的毫秒数。
+- setDate()    设置 Date 对象中月的某一天 (1 ~ 31)。
+- setFullYear()    设置 Date 对象中的年份（四位数字）。
+- setHours()    设置 Date 对象中的小时 (0 ~ 23)。
+- setMilliseconds()    设置 Date 对象中的毫秒 (0 ~ 999)。
+- setMinutes()    设置 Date 对象中的分钟 (0 ~ 59)。
+- setMonth()    设置 Date 对象中月份 (0 ~ 11)。
+- setSeconds()    设置 Date 对象中的秒钟 (0 ~ 59)。
+- setTime()    setTime() 方法以毫秒设置 Date 对象。
+- setUTCDate()    根据世界时设置 Date 对象中月份的一天 (1 ~ 31)。
+- setUTCFullYear()    根据世界时设置 Date 对象中的年份（四位数字）。
+- setUTCHours()    根据世界时设置 Date 对象中的小时 (0 ~ 23)。
+- setUTCMilliseconds()    根据世界时设置 Date 对象中的毫秒 (0 ~ 999)。
+- setUTCMinutes()    根据世界时设置 Date 对象中的分钟 (0 ~ 59)。
+- setUTCMonth()    根据世界时设置 Date 对象中的月份 (0 ~ 11)。
+- setUTCSeconds()    setUTCSeconds() 方法用于根据世界时 (UTC) 设置指定时间的秒字段。
+- setYear()    已废弃。请使用 setFullYear() 方法代替。
+- toDateString()    把 Date 对象的日期部分转换为字符串。
+- toGMTString()    已废弃。请使用 toUTCString() 方法代替。
+- toISOString()    使用 ISO 标准返回字符串的日期格式。
+- toJSON()    以 JSON 数据格式返回日期字符串。
+- toLocaleDateString()    根据本地时间格式，把 Date 对象的日期部分转换为字符串。
+- toLocaleTimeString()    根据本地时间格式，把 Date 对象的时间部分转换为字符串。
+- toLocaleString()    据本地时间格式，把 Date 对象转换为字符串。
+- toString()    把 Date 对象转换为字符串。
+- toTimeString()    把 Date 对象的时间部分转换为字符串。
+- toUTCString()    根据世界时，把 Date 对象转换为字符串。
+- UTC()    根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。
+- valueOf()    返回 Date 对象的原始值。
+</code></pre><h1 id="JavaScript-Array（数组）-对象"><a href="#JavaScript-Array（数组）-对象" class="headerlink" title="JavaScript Array（数组） 对象"></a>JavaScript Array（数组） 对象</h1><p>数组对象的作用是：使用单独的变量名来存储一系列的值。</p>
+<h2 id="什么是数组"><a href="#什么是数组" class="headerlink" title="什么是数组?"></a>什么是数组?</h2><p>数组对象是使用单独的变量名来存储一系列的值<br><br>数组可以用一个变量名存储所有的值，并且可以用变量名访问任何一个值。<br><br>数组中的每个元素都有自己的的ID，以便它可以很容易地被访问到。<br></p>
+<h2 id="创建一个数组"><a href="#创建一个数组" class="headerlink" title="创建一个数组"></a>创建一个数组</h2><p>1: 常规方式:</p>
+<pre><code>var myCars=new Array(); 
+myCars[0]=&quot;Saab&quot;;       
+myCars[1]=&quot;Volvo&quot;;
+myCars[2]=&quot;BMW&quot;;
+</code></pre><p>2: 简洁方式:</p>
+<pre><code>var myCars=new Array(&quot;Saab&quot;,&quot;Volvo&quot;,&quot;BMW&quot;);
+</code></pre><p>3: 字面:</p>
+<pre><code>var myCars=[&quot;Saab&quot;,&quot;Volvo&quot;,&quot;BMW&quot;];
+</code></pre><h2 id="访问数组"><a href="#访问数组" class="headerlink" title="访问数组"></a>访问数组</h2><p>通过指定数组名以及索引号码，你可以访问某个特定的元素。</p>
+<pre><code>var name=myCars[0];
+</code></pre><h2 id="在一个数组中你可以有不同的对象"><a href="#在一个数组中你可以有不同的对象" class="headerlink" title="在一个数组中你可以有不同的对象"></a>在一个数组中你可以有不同的对象</h2><p>所有的JavaScript变量都是对象。数组元素是对象。函数是对象。<br><br>因此，你可以在数组中有不同的变量类型。<br><br>你可以在一个数组中包含对象元素、函数、数组：</p>
+<pre><code>myArray[0]=Date.now;
+myArray[1]=myFunction;
+myArray[2]=myCars;
+</code></pre><h2 id="数组方法和属性"><a href="#数组方法和属性" class="headerlink" title="数组方法和属性"></a>数组方法和属性</h2><pre><code>var x=myCars.length             // the number of elements in myCars
+var y=myCars.indexOf(&quot;Volvo&quot;)   // the index position of &quot;Volvo&quot;
+</code></pre><h2 id="创建新方法"><a href="#创建新方法" class="headerlink" title="创建新方法"></a>创建新方法</h2><p>原型是JavaScript全局构造函数。它可以构建新Javascript对象的属性和方法。</p>
+<pre><code>Array.prototype.ucase=function()
+{
+  for (i=0;i&lt;this.length;i++)
+  {this[i]=this[i].toUpperCase();}
+}
+
+
+上面的例子创建了新的数组方法用于将数组小写字符转为大写字符。
+</code></pre><h2 id="数组对象属性"><a href="#数组对象属性" class="headerlink" title="数组对象属性"></a>数组对象属性</h2><pre><code>- concat()    连接两个或更多的数组，并返回结果。
+- every()    检测数值元素的每个元素是否都符合条件。
+- filter()    检测数值元素，并返回符合条件所有元素的数组。
+- indexOf()    搜索数组中的元素，并返回它所在的位置。
+- join()    把数组的所有元素放入一个字符串。
+- lastIndexOf()    返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。
+- map()        通过指定函数处理数组的每个元素，并返回处理后的数组。
+- pop()        删除数组的最后一个元素并返回删除的元素。
+- push()    向数组的末尾添加一个或更多元素，并返回新的长度。
+- reverse()    反转数组的元素顺序。
+- shift()    删除并返回数组的第一个元素。
+- slice()    选取数组的的一部分，并返回一个新数组。
+- some()    检测数组元素中是否有元素符合指定条件。
+- sort()    对数组的元素进行排序。
+- splice()    从数组中添加或删除元素。
+- toString()    把数组转换为字符串，并返回结果。
+- unshift()    向数组的开头添加一个或更多元素，并返回新的长度。
+- valueOf()    返回数组对象的原始值。 
+</code></pre><h1 id="JavaScript-Boolean（布尔）-对象"><a href="#JavaScript-Boolean（布尔）-对象" class="headerlink" title="JavaScript Boolean（布尔） 对象"></a>JavaScript Boolean（布尔） 对象</h1><p>TBoolean（布尔）对象用于将非布尔值转换为布尔值（true 或者 false）。</p>
+<h2 id="检测bool值"><a href="#检测bool值" class="headerlink" title="检测bool值"></a>检测bool值</h2><pre><code>&lt;script&gt;
+var b1=new Boolean(0);
+var b2=new Boolean(1);
+var b3=new Boolean(&quot;&quot;);
+var b4=new Boolean(null);
+var b5=new Boolean(NaN);
+var b6=new Boolean(&quot;false&quot;);
+
+document.write(&quot;0 is boolean &quot;+ b1 +&quot;&lt;br&gt;&quot;);
+document.write(&quot;1 is boolean &quot;+ b2 +&quot;&lt;br&gt;&quot;);
+document.write(&quot;An empty string is boolean &quot;+ b3 + &quot;&lt;br&gt;&quot;);
+document.write(&quot;null is boolean &quot;+ b4+ &quot;&lt;br&gt;&quot;);
+document.write(&quot;NaN is boolean &quot;+ b5 +&quot;&lt;br&gt;&quot;);
+document.write(&quot;The string &apos;false&apos; is boolean &quot;+ b6 +&quot;&lt;br&gt;&quot;);
+&lt;/script&gt;
+</code></pre><h2 id="创建-Boolean-对象"><a href="#创建-Boolean-对象" class="headerlink" title="创建 Boolean 对象"></a>创建 Boolean 对象</h2><p>Boolean 对象代表两个值:”true” 或者 “false”<br><br>下面的代码定义了一个名为 myBoolean 的布尔对象：</p>
+<pre><code>var myBoolean=new Boolean();
+</code></pre><p>如果布尔对象无初始值或者其值为:</p>
+<ul>
+<li>0</li>
+<li>-0</li>
+<li>null</li>
+<li>“”</li>
+<li>false</li>
+<li>undefined</li>
+<li>NaN<br>那么对象的值为 false。否则，其值为 true（即使当自变量为字符串 “false” 时）！</li>
+</ul>
+<h2 id="Boolean-对象属性"><a href="#Boolean-对象属性" class="headerlink" title="Boolean 对象属性"></a>Boolean 对象属性</h2><pre><code>- constructor    返回对创建此对象的 Boolean 函数的引用
+- prototype    使您有能力向对象添加属性和方法。
+</code></pre><h2 id="Boolean-对象方法"><a href="#Boolean-对象方法" class="headerlink" title="Boolean 对象方法"></a>Boolean 对象方法</h2><pre><code>- toString()    把布尔值转换为字符串，并返回结果。
+- valueOf()    返回 Boolean 对象的原始值。    
+</code></pre><h1 id="JavaScript-Math（算数）-对象"><a href="#JavaScript-Math（算数）-对象" class="headerlink" title="JavaScript Math（算数） 对象"></a>JavaScript Math（算数） 对象</h1><p>Math（算数）对象的作用是：执行常见的算数任务。</p>
+<h2 id="Math-对象"><a href="#Math-对象" class="headerlink" title="Math 对象"></a>Math 对象</h2><p>Math（算数）对象的作用是：执行普通的算数任务。<br><br>Math 对象提供多种算数值类型和函数。无需在使用这个对象之前对它进行定义。</p>
+<p>使用Math的属性/方法的语法：</p>
+<pre><code>var x=Math.PI;
+var y=Math.sqrt(16);
+</code></pre><p>JavaScript 提供 8 种可被 Math 对象访问的算数值：</p>
+<pre><code>Math.E    自然对数
+Math.PI        圆周率
+Math.SQRT2    返回2的平方根大约是 1.414.
+Math.SQRT1_2    返回 2 的平方根的倒数。这个值近似为 0.7071067811865476。
+Math.LN2    2的自然对数
+Math.LN10    10的自然对数
+Math.LOG2E    以2为底e的对数
+Math.LOG10E    以10为底e的对数
+</code></pre><h2 id="算数方法"><a href="#算数方法" class="headerlink" title="算数方法"></a>算数方法</h2><p>Math 对象的 round 方法对一个数进行四舍五入。</p>
+<pre><code>document.write(Math.round(4.7));
+</code></pre><p>Math 对象的 random() 方法来返回一个介于 0 和 1 之间的随机数：</p>
+<pre><code>document.write(Math.random());
+</code></pre><p> Math 对象的 floor() 方法和 random() 来返回一个介于 0 和 11 之间的随机数</p>
+<pre><code>document.write(Math.floor(Math.random()*11));
+</code></pre><h2 id="Math-对象方法"><a href="#Math-对象方法" class="headerlink" title="Math 对象方法"></a>Math 对象方法</h2><pre><code>- abs(x)        返回 x 的绝对值。
+- acos(x)        返回 x 的反余弦值。
+- asin(x)        返回 x 的反正弦值。
+- atan(x)        以介于 -PI/2 与 PI/2 弧度之间的数值来返回 x 的反正切值。
+- atan2(y,x)    返回从 x 轴到点 (x,y) 的角度（介于 -PI/2 与 PI/2 弧度之间）。
+- ceil(x)        对数进行上舍入。
+- cos(x)        返回数的余弦。
+- exp(x)        返回 Ex 的指数。
+- floor(x)        对 x 进行下舍入。
+- log(x)        返回数的自然对数（底为e）。
+- max(x,y,z,...,n)    返回 x,y,z,...,n 中的最高值。
+- min(x,y,z,...,n)    返回 x,y,z,...,n中的最低值。
+- pow(x,y)        返回 x 的 y 次幂。
+- random()        返回 0 ~ 1 之间的随机数。
+- round(x)        把数四舍五入为最接近的整数。
+- sin(x)        返回数的正弦。
+- sqrt(x)        返回数的平方根。
+- tan(x)        返回角的正切。
+</code></pre><h1 id="JavaScript-RegExp-对象"><a href="#JavaScript-RegExp-对象" class="headerlink" title="JavaScript RegExp 对象"></a>JavaScript RegExp 对象</h1><p><a href="http://cwujieblog.github.io/2016/04/08/javascript-study03/" target="_blank" rel="external">RegExp </a>对象</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js对象/" rel="tag">#js对象</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/12/javascript-study06/" rel="next" title="javascript-study06">
+                <i class="fa fa-chevron-left"></i> javascript-study06
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/14/javascript-study08/" rel="prev" title="javascript-study08">
+                javascript-study08 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/04/13/javascript-study07/"
+     data-title="javascript-study07"
+     data-content=""
+     data-url="http://wujieBlog.github.io/2016/04/13/javascript-study07/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/13/javascript-study07/"
+           data-title="javascript-study07" data-url="http://wujieBlog.github.io/2016/04/13/javascript-study07/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="cui wujie" />
+          <p class="site-author-name" itemprop="name">cui wujie</p>
+          <p class="site-description motion-element" itemprop="description">花逞春光，一番雨，一番风，终归尘土;竹坚雅操，几朝霜几朝雪，傲就琅矸</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/cwjie0229/" target="_blank">
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/cwjiewb/" target="_blank">
+                  
+                  WeiBo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/cwujie" target="_blank">
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/cui-wu-jie-7" target="_blank">
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://cwjie0229.github.io" target="_blank">
+                  
+                  Resume
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-对象"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#访问对象的属性"><span class="nav-number">1.1.</span> <span class="nav-text">访问对象的属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问对象的方法"><span class="nav-number">1.2.</span> <span class="nav-text">访问对象的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Javascript对象"><span class="nav-number">1.3.</span> <span class="nav-text">创建Javascript对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#举例说明"><span class="nav-number">1.4.</span> <span class="nav-text">举例说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用对象构造器"><span class="nav-number">1.5.</span> <span class="nav-text">使用对象构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Javascript对象实例"><span class="nav-number">1.6.</span> <span class="nav-text">创建Javascript对象实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加属性到-JavaScript-对象"><span class="nav-number">1.7.</span> <span class="nav-text">添加属性到 JavaScript 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加方法到Javascript对象"><span class="nav-number">1.8.</span> <span class="nav-text">添加方法到Javascript对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript-类"><span class="nav-number">1.9.</span> <span class="nav-text">Javascript 类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript-for-…-in-循环"><span class="nav-number">1.10.</span> <span class="nav-text">Javascript for … in  循环</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Javascript-Number-对象"><span class="nav-number">2.</span> <span class="nav-text">Javascript Number 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-数字"><span class="nav-number">2.1.</span> <span class="nav-text">javascript 数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所有Javascript的数字均为64位"><span class="nav-number">2.2.</span> <span class="nav-text">所有Javascript的数字均为64位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#精度"><span class="nav-number">2.3.</span> <span class="nav-text">精度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八进制和十六进制"><span class="nav-number">2.4.</span> <span class="nav-text">八进制和十六进制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无穷大（Infinity）"><span class="nav-number">2.5.</span> <span class="nav-text">无穷大（Infinity）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NaN-非数字值-特别注意"><span class="nav-number">2.6.</span> <span class="nav-text">NaN - 非数字值(特别注意)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数字可以是数字或者对象"><span class="nav-number">2.7.</span> <span class="nav-text">数字可以是数字或者对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数字属性"><span class="nav-number">2.8.</span> <span class="nav-text">数字属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数字方法"><span class="nav-number">2.9.</span> <span class="nav-text">数字方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-字符串（String）-对象"><span class="nav-number">3.</span> <span class="nav-text">JavaScript 字符串（String） 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-字符串"><span class="nav-number">3.1.</span> <span class="nav-text">JavaScript 字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在字符串中查找字符串"><span class="nav-number">3.2.</span> <span class="nav-text">在字符串中查找字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容匹配"><span class="nav-number">3.3.</span> <span class="nav-text">内容匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#替换内容"><span class="nav-number">3.4.</span> <span class="nav-text">替换内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串大小写转换"><span class="nav-number">3.5.</span> <span class="nav-text">字符串大小写转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串转为数组"><span class="nav-number">3.6.</span> <span class="nav-text">字符串转为数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊字符"><span class="nav-number">3.7.</span> <span class="nav-text">特殊字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串属性"><span class="nav-number">3.8.</span> <span class="nav-text">字符串属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串方法"><span class="nav-number">3.9.</span> <span class="nav-text">字符串方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-Date（日期）-对象"><span class="nav-number">4.</span> <span class="nav-text">JavaScript Date（日期） 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建日期"><span class="nav-number">4.1.</span> <span class="nav-text">创建日期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置日期："><span class="nav-number">4.2.</span> <span class="nav-text">设置日期：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两个日期比较"><span class="nav-number">4.3.</span> <span class="nav-text">两个日期比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date-对象方法"><span class="nav-number">4.4.</span> <span class="nav-text">Date 对象方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-Array（数组）-对象"><span class="nav-number">5.</span> <span class="nav-text">JavaScript Array（数组） 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是数组"><span class="nav-number">5.1.</span> <span class="nav-text">什么是数组?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个数组"><span class="nav-number">5.2.</span> <span class="nav-text">创建一个数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问数组"><span class="nav-number">5.3.</span> <span class="nav-text">访问数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在一个数组中你可以有不同的对象"><span class="nav-number">5.4.</span> <span class="nav-text">在一个数组中你可以有不同的对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组方法和属性"><span class="nav-number">5.5.</span> <span class="nav-text">数组方法和属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建新方法"><span class="nav-number">5.6.</span> <span class="nav-text">创建新方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组对象属性"><span class="nav-number">5.7.</span> <span class="nav-text">数组对象属性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-Boolean（布尔）-对象"><span class="nav-number">6.</span> <span class="nav-text">JavaScript Boolean（布尔） 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#检测bool值"><span class="nav-number">6.1.</span> <span class="nav-text">检测bool值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建-Boolean-对象"><span class="nav-number">6.2.</span> <span class="nav-text">创建 Boolean 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Boolean-对象属性"><span class="nav-number">6.3.</span> <span class="nav-text">Boolean 对象属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Boolean-对象方法"><span class="nav-number">6.4.</span> <span class="nav-text">Boolean 对象方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-Math（算数）-对象"><span class="nav-number">7.</span> <span class="nav-text">JavaScript Math（算数） 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Math-对象"><span class="nav-number">7.1.</span> <span class="nav-text">Math 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算数方法"><span class="nav-number">7.2.</span> <span class="nav-text">算数方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Math-对象方法"><span class="nav-number">7.3.</span> <span class="nav-text">Math 对象方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-RegExp-对象"><span class="nav-number">8.</span> <span class="nav-text">JavaScript RegExp 对象</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cui wujie</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"iissnan-notes"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

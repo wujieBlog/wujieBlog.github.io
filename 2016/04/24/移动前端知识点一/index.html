@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="移动前端," />
 
 
 
@@ -57,19 +57,22 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="view详解viewport简介
+
+viewport特性，一个移动专属的Meta的值，用于定义视口的各种行为。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://wujieBlog.github.io/2016/05/11/hello-world/index.html">
+<meta property="og:title" content="移动前端知识点.md">
+<meta property="og:url" content="http://wujieBlog.github.io/2016/04/24/移动前端知识点一/index.html">
 <meta property="og:site_name" content="MrCui's Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-05-11T13:36:54.787Z">
+<meta property="og:description" content="view详解viewport简介
+
+viewport特性，一个移动专属的Meta的值，用于定义视口的各种行为。">
+<meta property="og:updated_time" content="2016-04-24T15:25:40.036Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="移动前端知识点.md">
+<meta name="twitter:description" content="view详解viewport简介
+
+viewport特性，一个移动专属的Meta的值，用于定义视口的各种行为。">
 
 
 
@@ -87,7 +90,7 @@ Quick">
   };
 </script>
 
-  <title> Hello World | MrCui's Blog </title>
+  <title> 移动前端知识点.md | MrCui's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -217,7 +220,7 @@ Quick">
             
             
               
-                Hello World
+                移动前端知识点.md
               
             
           </h1>
@@ -229,8 +232,8 @@ Quick">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-11T21:36:54+08:00" content="2016-05-11">
-              2016-05-11
+            <time itemprop="dateCreated" datetime="2016-04-24T22:41:39+08:00" content="2016-04-24">
+              2016-04-24
             </time>
           </span>
 
@@ -240,8 +243,8 @@ Quick">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/11/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/11/hello-world/" itemprop="commentsCount"></span>
+                <a href="/2016/04/24/移动前端知识点一/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/24/移动前端知识点一/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -263,15 +266,57 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h1 id="view详解"><a href="#view详解" class="headerlink" title="view详解"></a>view详解</h1><p>viewport简介</p>
+<ul>
+<li>viewport特性，一个移动专属的Meta的值，用于定义视口的各种行为。<br></li>
+</ul>
+<a id="more"></a>
+<h1 id="layout-viewport"><a href="#layout-viewport" class="headerlink" title="layout viewport"></a>layout viewport</h1><p>Apple也发现了这个问题，并且适时的出现，它提出了一个方案用来解决这个问题。在iOS Safari中定义了一个viewport meta标签，用来创建一个虚拟的布局视口（layout viewport），而这个视口的分辨率接近于PC显示器，Apple将其定义为980px。</p>
+<p>这就很好的解决了早期的页面在手机上显示的问题，由于两者之间的宽度趋近，CSS只需要像在PC上那样渲染页面就行，原有的页面结构不会被破坏。</p>
+<h1 id="visual-viewport"><a href="#visual-viewport" class="headerlink" title="visual viewport"></a>visual viewport</h1><p>有了layout viewport，我们还需要一个视口用来承载它，这个视口可以简单的认为是手持设备物理屏幕的可视区域，我们称之为（视觉视口）visual viewport。这是一个比较直观的概念，因为你能看得见你的手机屏幕。</p>
+<p>对于visual viewport，开发者一般只需要知道它的存在和概念就行，因为无法对它进行任何设置或者修改。很明显，visual viewport的尺寸不会是一个固定的值，甚至每款设备都可能不同。大致列几种常见设备的visual viewport尺寸：</p>
+<ul>
+<li>iPhone4~iPhone5S: 320*480px</li>
+<li>iPhone6~iPhone6S: 375*627px</li>
+<li>iPhone6 Plus~iPhone6S Plus: 414*736px</li>
+</ul>
+<p>以iPhone4S为例，会在其320px的visual viewport上，创建一个宽980px的layout viewport，于是用户可以在visual viewport中拖动或者缩放网页，来获得良好的浏览效果；布局视口用来配合CSS渲染布局，当我们定义一个容器的宽度为100%时，这个容器的实际宽度是980px而不是320px，通过这种方式大部分网页就能以缩放的形式正常显示在手机屏幕上了。</p>
+<h1 id="ideal-viewport"><a href="#ideal-viewport" class="headerlink" title="ideal viewport"></a>ideal viewport</h1><p>我们还需要一个视口，它类似于布局视口，但宽度和视觉视口相同，这就是完美视口（ideal viewport）。</p>
+<p>有了完美视口，用户不用缩放和拖动网页就能够很好的进行网页浏览。而完美视口也是通过viewport meta的某种设置来达到。</p>
+<p>说了这么一大堆的东西，貌似都和viewport有关联，那么viewport到底怎么搞，请继续往下。</p>
+<h1 id="viewport特性"><a href="#viewport特性" class="headerlink" title="viewport特性"></a>viewport特性</h1><ul>
+<li>通常情况下，viewport有以下6种设置，但是也不排除厂商可能会增加一些特定的设置</li>
+</ul>
+<pre><code>Name                       Value                    Description
+width            正整数或device-width             定义为视口的宽度，单位为像素
+height            正整数或device-height         定义为视口的高度，单位为像素    
+initial-scale    [0.0-10.0]                        定义初始缩放值
+minimum-scale    [0.0-10.0]                    定义缩小最小比例，它必须小于或等于maximum-scale的设置
+maximum-scale    [0.0-10.0]                    定义放大最大比例，它必须大于或等于minimum-scale的设置
+user-scalable    yes/no                        定义是否允许用户手动缩放页面，默认为yes
+</code></pre><h2 id="width"><a href="#width" class="headerlink" title="width"></a>width</h2><p>width被用来定义layout viewport的宽度，如果不指定该属性（或者移除viewport meta标签），则layout viewport宽度为厂商默认值。如：iPhone为980px；</p>
+<p>举个例子：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+</code></pre><p>此时的layout viewport将成为ideal viewport，因为layout viewport宽度与设备视觉视口宽度一致了。</p>
+<p>除了width之外，还有一个属性定义也能实现ideal viewport，那就是initial-scale。</p>
+<h2 id="height"><a href="#height" class="headerlink" title="height"></a>height</h2><p>与width类似，但实际上却不常用，因为没有太多的use case。</p>
+<h2 id="initial-scale"><a href="#initial-scale" class="headerlink" title="initial-scale"></a>initial-scale</h2><p>如果想页面默认以某个比例放大或者缩小然后呈现给用户，那么可以通过定义initial-scale来完成。</p>
+<p>initial-scale用于指定页面的初始缩放比例，假定你这样定义：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=2&quot; /&gt;
+</code></pre><p>那么用户将会看到2倍大小的页面内容。</p>
+<p>在说width的时候，我们说到initial-scale也能实现ideal viewport，是的，你只需要这样做，也可以得到完美视口：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1&quot; /&gt;
+</code></pre><h2 id="maximum-scale"><a href="#maximum-scale" class="headerlink" title="maximum-scale"></a>maximum-scale</h2><p>在移动端，你可能会考虑用户浏览不便，然后给予用户放大页面的权利，但同时又希望是在一定范围内的放大，这时就可以使用maximum-scale来进行约束。</p>
+<p>maximum-scale用于指定用户能够放大的比例。</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1,maximum-scale=5&quot; /&gt;
+</code></pre><p>假设页面的默认缩放值initial-scale是1，那么用户最终能够将页面放大到这个初始页面大小的5倍。</p>
+<h2 id="minimum-scale"><a href="#minimum-scale" class="headerlink" title="minimum-scale"></a>minimum-scale</h2><p>类似maximum-scale的描述，不过minimum-scale是用来指定页面缩小比例的。</p>
+<p>通常情况下，为了有更好地体验，不会定义该属性的值比1更小，因为那样页面将变得难以阅读。</p>
+<h2 id="user-scalable"><a href="#user-scalable" class="headerlink" title="user-scalable"></a>user-scalable</h2><p>如果你不想页面被放大或者缩小，通过定义user-scalable来约束用户是否可以通过手势对页面进行缩放即可。</p>
+<p>该属性的默认值为yes，即可被缩放（如果使用默认值，该属性可以不定义）；当然，如果你的应用不打算让用户拥有缩放权限，可以将该值设置为no。</p>
+<p>使用方法如下：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no&quot; /&gt;
+</code></pre><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>当你掌握了viewport，那么意味着你已经大致了解了移动平台与PC平台的不同，你可以更专注而细致的去解决某些平台差异问题。</p>
 
       
     </div>
@@ -290,18 +335,28 @@ Quick">
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/移动前端/" rel="tag">#移动前端</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/24/移动前端知识点一/" rel="next" title="移动前端知识点.md">
-                <i class="fa fa-chevron-left"></i> 移动前端知识点.md
+              <a href="/2016/04/19/JsCommenFunctions/" rel="next" title="JsCommenFunctions">
+                <i class="fa fa-chevron-left"></i> JsCommenFunctions
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/11/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -316,10 +371,10 @@ Quick">
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/05/11/hello-world/"
-     data-title="Hello World"
+        <div class="ds-share flat" data-thread-key="2016/04/24/移动前端知识点一/"
+     data-title="移动前端知识点.md"
      data-content=""
-     data-url="http://wujieBlog.github.io/2016/05/11/hello-world/">
+     data-url="http://wujieBlog.github.io/2016/04/24/移动前端知识点一/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -346,8 +401,8 @@ Quick">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/11/hello-world/"
-           data-title="Hello World" data-url="http://wujieBlog.github.io/2016/05/11/hello-world/">
+      <div class="ds-thread" data-thread-key="2016/04/24/移动前端知识点一/"
+           data-title="移动前端知识点.md" data-url="http://wujieBlog.github.io/2016/04/24/移动前端知识点一/">
       </div>
     
   </div>
@@ -470,7 +525,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#view详解"><span class="nav-number">1.</span> <span class="nav-text">view详解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#layout-viewport"><span class="nav-number">2.</span> <span class="nav-text">layout viewport</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#visual-viewport"><span class="nav-number">3.</span> <span class="nav-text">visual viewport</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ideal-viewport"><span class="nav-number">4.</span> <span class="nav-text">ideal viewport</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#viewport特性"><span class="nav-number">5.</span> <span class="nav-text">viewport特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#width"><span class="nav-number">5.1.</span> <span class="nav-text">width</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#height"><span class="nav-number">5.2.</span> <span class="nav-text">height</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#initial-scale"><span class="nav-number">5.3.</span> <span class="nav-text">initial-scale</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#maximum-scale"><span class="nav-number">5.4.</span> <span class="nav-text">maximum-scale</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#minimum-scale"><span class="nav-number">5.5.</span> <span class="nav-text">minimum-scale</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#user-scalable"><span class="nav-number">5.6.</span> <span class="nav-text">user-scalable</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">6.</span> <span class="nav-text">结语</span></a></li></ol></div>
             
           </div>
         </section>
